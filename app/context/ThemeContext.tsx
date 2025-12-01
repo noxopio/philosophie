@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-export type Theme = 'classic' | 'dark' | 'sepia' | 'ocean';
+export type Theme = 'classic' | 'dark' | 'sepia' | 'ocean' | 'cyberpunk' | 'neumorphic-light' | 'neumorphic-dark' | 'midnight';
 
 interface ThemeContextType {
     theme: Theme;
@@ -12,11 +12,12 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-    const [theme, setTheme] = useState<Theme>('classic');
+    const [theme, setTheme] = useState<Theme>('midnight');
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('philosophie-theme') as Theme;
         if (savedTheme) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setTheme(savedTheme);
         }
     }, []);

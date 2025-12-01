@@ -2,19 +2,10 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme, Theme } from '../context/ThemeContext';
 import styles from './FloatingMenu.module.scss';
 
 const FloatingMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { theme, setTheme } = useTheme();
-
-    const themes: { value: Theme; label: string; icon: string }[] = [
-        { value: 'classic', label: 'Clásico', icon: '📖' },
-        { value: 'dark', label: 'Oscuro', icon: '🌙' },
-        { value: 'sepia', label: 'Sepia', icon: '📜' },
-        { value: 'ocean', label: 'Océano', icon: '🌊' },
-    ];
 
     const menuItems = [
         { label: 'Inicio', href: '#inicio' },
@@ -62,27 +53,6 @@ const FloatingMenu = () => {
                                         </motion.li>
                                     ))}
                                 </ul>
-                            </div>
-
-                            <div className={styles.rightPage}>
-                                <h3>Temas</h3>
-                                <div className={styles.themeGrid}>
-                                    {themes.map((t, index) => (
-                                        <motion.button
-                                            key={t.value}
-                                            className={`${styles.themeButton} ${theme === t.value ? styles.active : ''}`}
-                                            onClick={() => setTheme(t.value)}
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: index * 0.1 }}
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                        >
-                                            <span className={styles.themeIcon}>{t.icon}</span>
-                                            <span className={styles.themeLabel}>{t.label}</span>
-                                        </motion.button>
-                                    ))}
-                                </div>
                             </div>
                         </div>
                     </motion.div>

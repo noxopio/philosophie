@@ -1,0 +1,124 @@
+/* eslint-disable react/no-unescaped-entities */
+'use client';
+
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import styles from './Sidebar.module.scss';
+
+const Sidebar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const philosophers = [
+        { name: 'Platón', image: '🏛️', period: 'Antigua' },
+        { name: 'Aristóteles', image: '📚', period: 'Antigua' },
+        { name: 'Sócrates', image: '💭', period: 'Antigua' },
+        { name: 'Descartes', image: '🤔', period: 'Moderna' },
+        { name: 'Kant', image: '⚖️', period: 'Moderna' },
+        { name: 'Nietzsche', image: '⚡', period: 'Contemporánea' },
+    ];
+
+    const schools = [
+        { name: 'Estoicismo', icon: '🏔️' },
+        { name: 'Existencialismo', icon: '🎭' },
+        { name: 'Racionalismo', icon: '🧠' },
+        { name: 'Empirismo', icon: '👁️' },
+    ];
+
+    return (
+        <>
+            {/* Mobile toggle button */}
+            <button
+                className={styles.mobileToggle}
+                aria-expanded={isOpen}
+                aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+                onClick={() => setIsOpen(prev => !prev)}
+            >
+                {isOpen ? '✕' : '☰'}
+            </button>
+
+            <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+                <div className={styles.sidebarContent}>
+                    <motion.section
+                        className={styles.section}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <h2 className={styles.sectionTitle}>Filósofos Destacados</h2>
+                        <div className={styles.philosopherList}>
+                            {philosophers.map((philosopher, index) => (
+                                <motion.div
+                                    key={philosopher.name}
+                                    className={styles.philosopherCard}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
+                                    whileHover={{ scale: 1.05, x: 10 }}
+                                    onClick={() => setIsOpen(false)} // cierra en móvil cuando se selecciona
+                                >
+                                    <div className={styles.philosopherIcon}>{philosopher.image}</div>
+                                    <div className={styles.philosopherInfo}>
+                                        <h3>{philosopher.name}</h3>
+                                        <span className={styles.period}>{philosopher.period}</span>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </motion.section>
+
+                    <motion.section
+                        className={styles.section}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                    >
+                        <h2 className={styles.sectionTitle}>Corrientes Filosóficas</h2>
+                        <div className={styles.schoolList}>
+                            {schools.map((school, index) => (
+                                <motion.a
+                                    key={school.name}
+                                    href={`#${school.name.toLowerCase()}`}
+                                    className={styles.schoolLink}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.5 + index * 0.1 }}
+                                    whileHover={{ scale: 1.08, x: 5 }}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    <span className={styles.schoolIcon}>{school.icon}</span>
+                                    <span className={styles.schoolName}>{school.name}</span>
+                                </motion.a>
+                            ))}
+                        </div>
+                    </motion.section>
+
+                    <motion.section
+                        className={styles.section}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                    >
+                        <h2 className={styles.sectionTitle}>Enlaces Rápidos</h2>
+                        <nav className={styles.quickLinks}>
+                            <a href="#historia" onClick={() => setIsOpen(false)}>📜 Historia de la Filosofía</a>
+                            <a href="#metodos" onClick={() => setIsOpen(false)}>🔍 Métodos Filosóficos</a>
+                            <a href="#ramas" onClick={() => setIsOpen(false)}>🌳 Ramas de la Filosofía</a>
+                            <a href="#lecturas" onClick={() => setIsOpen(false)}>📖 Lecturas Recomendadas</a>
+                        </nav>
+                    </motion.section>
+
+                    <motion.div
+                        className={styles.decorativeQuote}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1 }}
+                    >
+                        <p>"Sólo sé que no sé nada"</p>
+                        <span>- Sócrates</span>
+                    </motion.div>
+                </div>
+            </aside>
+        </>
+    );
+};
+
+export { Sidebar };

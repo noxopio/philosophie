@@ -1,0 +1,97 @@
+.themeSelector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toggleButton {
+    position: relative;
+    z-index: 1010;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--menu-bg);
+    border: 2px solid var(--menu-border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: all 0.3s ease;
+    color: var(--menu-text);
+
+    &:hover {
+        box-shadow: 0 6px 16px var(--shadow-hover);
+        transform: translateY(-2px);
+    }
+}
+
+.menuContainer {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 100;
+    min-width: 280px;
+}
+
+.themePanel {
+    background: var(--menu-bg);
+    border: 2px solid var(--menu-border);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px var(--shadow);
+
+    h3 {
+        font-size: 1.2rem;
+        margin: 0 0 16px 0;
+        color: var(--heading-color);
+        font-family: var(--font-serif);
+        text-align: center;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--menu-border);
+    }
+}
+
+.themeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.themeButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 8px;
+    border: 2px solid var(--menu-border);
+    border-radius: 10px;
+    background: var(--theme-button-bg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-color: var(--theme-button-hover-border);
+        background: var(--theme-button-hover-bg);
+        transform: translateY(-3px);
+    }
+
+    &.active {
+        border-color: var(--theme-button-active-border);
+        background: var(--theme-button-active-bg);
+        box-shadow: 0 0 12px var(--theme-button-active-shadow);
+    }
+}
+
+.themeIcon {
+    font-size: 1.5rem;
+}
+
+.themeLabel {
+    font-size: 0.75rem;
+    color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+}
