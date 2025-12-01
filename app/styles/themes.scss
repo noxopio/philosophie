@@ -1,0 +1,275 @@
+/* ========================================
+   Variables de Tema - Filosofía
+   ======================================== */
+
+:root {
+  // Fuentes
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ========================================
+   Tema Clásico (Default)
+   ======================================== */
+[data-theme='classic'] {
+  // Colores principales
+  --main-bg: #f5f1e8;
+  --text-color: #2c2416;
+  --text-secondary: #5c5040;
+  --heading-color: #1a1308;
+  --accent-color: #8b6f47;
+
+  // Menú flotante
+  --menu-bg: #fff9f0;
+  --menu-border: #d4c4a8;
+  --menu-text: #2c2416;
+  --page-bg-left: #fdfbf7;
+  --page-bg-center: #f9f5ed;
+  --page-bg-right: #fdfbf7;
+
+  // Sidebar
+  --sidebar-bg: #fefdfb;
+  --sidebar-border: #e6dcc8;
+  --section-border: #d4c4a8;
+
+  // Cards y contenedores
+  --card-bg: #ffffff;
+  --card-border: #e0d5c0;
+  --card-hover-bg: #fffef8;
+  --card-hover-border: #c9b89a;
+
+  // Iconos
+  --icon-bg: linear-gradient(135deg, #f9f5ed 0%, #ede4d3 100%);
+
+  // Enlaces
+  --link-color: #6b5638;
+  --link-bg: #faf7f0;
+  --link-border: #e6dcc8;
+  --link-hover-bg: #f0e8d8;
+  --link-hover-color: #4a3d28;
+  --link-hover-border: #d4c4a8;
+
+  // Botones
+  --button-bg: #8b6f47;
+  --button-color: #ffffff;
+  --button-border: #6b5638;
+  --button-hover-bg: #6b5638;
+  --button-hover-color: #ffffff;
+  --button-hover-border: #4a3d28;
+
+  // Theme buttons
+  --theme-button-bg: #faf7f0;
+  --theme-button-hover-bg: #f0e8d8;
+  --theme-button-hover-border: #c9b89a;
+  --theme-button-active-bg: #8b6f47;
+  --theme-button-active-border: #6b5638;
+  --theme-button-active-shadow: rgba(139, 111, 71, 0.4);
+
+  // Categorías
+  --category-bg: #e8dfc8;
+  --category-color: #5c5040;
+
+  // Quote
+  --quote-bg: #faf7f0;
+
+  // Conclusión
+  --conclusion-bg: #fdfbf7;
+
+  // Scrollbar
+  --scrollbar-track: #f5f1e8;
+  --scrollbar-thumb: #c9b89a;
+  --scrollbar-thumb-hover: #a89878;
+
+  // Sombras
+  --shadow: rgba(44, 36, 22, 0.08);
+  --shadow-hover: rgba(44, 36, 22, 0.15);
+}
+
+/* ========================================
+   Tema Oscuro
+   ======================================== */
+[data-theme='dark'] {
+  --main-bg: #1a1a1a;
+  --text-color: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --heading-color: #f5f5f5;
+  --accent-color: #bb86fc;
+
+  --menu-bg: #252525;
+  --menu-border: #3d3d3d;
+  --menu-text: #e0e0e0;
+  --page-bg-left: #2a2a2a;
+  --page-bg-center: #222222;
+  --page-bg-right: #2a2a2a;
+
+  --sidebar-bg: #1f1f1f;
+  --sidebar-border: #333333;
+  --section-border: #3d3d3d;
+
+  --card-bg: #252525;
+  --card-border: #333333;
+  --card-hover-bg: #2d2d2d;
+  --card-hover-border: #4d4d4d;
+
+  --icon-bg: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+
+  --link-color: #bb86fc;
+  --link-bg: #222222;
+  --link-border: #333333;
+  --link-hover-bg: #2d2d2d;
+  --link-hover-color: #d4b5ff;
+  --link-hover-border: #4d4d4d;
+
+  --button-bg: #bb86fc;
+  --button-color: #1a1a1a;
+  --button-border: #9965f4;
+  --button-hover-bg: #d4b5ff;
+  --button-hover-color: #1a1a1a;
+  --button-hover-border: #bb86fc;
+
+  --theme-button-bg: #2a2a2a;
+  --theme-button-hover-bg: #333333;
+  --theme-button-hover-border: #555555;
+  --theme-button-active-bg: #bb86fc;
+  --theme-button-active-border: #9965f4;
+  --theme-button-active-shadow: rgba(187, 134, 252, 0.4);
+
+  --category-bg: #333333;
+  --category-color: #bb86fc;
+
+  --quote-bg: #252525;
+  --conclusion-bg: #222222;
+
+  --scrollbar-track: #1a1a1a;
+  --scrollbar-thumb: #444444;
+  --scrollbar-thumb-hover: #555555;
+
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-hover: rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================
+   Tema Sepia (Antiguo)
+   ======================================== */
+[data-theme='sepia'] {
+  --main-bg: #f4ecd8;
+  --text-color: #3d2f1f;
+  --text-secondary: #6b5745;
+  --heading-color: #2a1f14;
+  --accent-color: #8b4513;
+
+  --menu-bg: #f9f3e3;
+  --menu-border: #d4b896;
+  --menu-text: #3d2f1f;
+  --page-bg-left: #fcf7eb;
+  --page-bg-center: #f7f0e0;
+  --page-bg-right: #fcf7eb;
+
+  --sidebar-bg: #faf5e9;
+  --sidebar-border: #d9c9ad;
+  --section-border: #d4b896;
+
+  --card-bg: #fffef8;
+  --card-border: #e6d7ba;
+  --card-hover-bg: #fff9ed;
+  --card-hover-border: #ccb892;
+
+  --icon-bg: linear-gradient(135deg, #f9f3e3 0%, #e8ddc8 100%);
+
+  --link-color: #8b4513;
+  --link-bg: #f9f3e3;
+  --link-border: #e6d7ba;
+  --link-hover-bg: #efe3cd;
+  --link-hover-color: #654321;
+  --link-hover-border: #d4b896;
+
+  --button-bg: #8b4513;
+  --button-color: #fffef8;
+  --button-border: #6b3410;
+  --button-hover-bg: #a0522d;
+  --button-hover-color: #fffef8;
+  --button-hover-border: #8b4513;
+
+  --theme-button-bg: #f9f3e3;
+  --theme-button-hover-bg: #efe3cd;
+  --theme-button-hover-border: #ccb892;
+  --theme-button-active-bg: #8b4513;
+  --theme-button-active-border: #6b3410;
+  --theme-button-active-shadow: rgba(139, 69, 19, 0.4);
+
+  --category-bg: #e8ddc8;
+  --category-color: #654321;
+
+  --quote-bg: #f9f3e3;
+  --conclusion-bg: #fcf7eb;
+
+  --scrollbar-track: #f4ecd8;
+  --scrollbar-thumb: #ccb892;
+  --scrollbar-thumb-hover: #b39a78;
+
+  --shadow: rgba(61, 47, 31, 0.1);
+  --shadow-hover: rgba(61, 47, 31, 0.18);
+}
+
+/* ========================================
+   Tema Océano
+   ======================================== */
+[data-theme='ocean'] {
+  --main-bg: #e8f4f8;
+  --text-color: #1b3a4b;
+  --text-secondary: #4a6d7c;
+  --heading-color: #0f2837;
+  --accent-color: #2196f3;
+
+  --menu-bg: #f0f8fb;
+  --menu-border: #b8d4e0;
+  --menu-text: #1b3a4b;
+  --page-bg-left: #f5fbfd;
+  --page-bg-center: #ecf6fa;
+  --page-bg-right: #f5fbfd;
+
+  --sidebar-bg: #f5fbfd;
+  --sidebar-border: #c5dfe8;
+  --section-border: #b8d4e0;
+
+  --card-bg: #ffffff;
+  --card-border: #c5dfe8;
+  --card-hover-bg: #f8fcfe;
+  --card-hover-border: #90c1d4;
+
+  --icon-bg: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+
+  --link-color: #1976d2;
+  --link-bg: #f0f8fb;
+  --link-border: #c5dfe8;
+  --link-hover-bg: #e1f2f7;
+  --link-hover-color: #0d47a1;
+  --link-hover-border: #b8d4e0;
+
+  --button-bg: #2196f3;
+  --button-color: #ffffff;
+  --button-border: #1976d2;
+  --button-hover-bg: #1976d2;
+  --button-hover-color: #ffffff;
+  --button-hover-border: #0d47a1;
+
+  --theme-button-bg: #f0f8fb;
+  --theme-button-hover-bg: #e1f2f7;
+  --theme-button-hover-border: #90c1d4;
+  --theme-button-active-bg: #2196f3;
+  --theme-button-active-border: #1976d2;
+  --theme-button-active-shadow: rgba(33, 150, 243, 0.4);
+
+  --category-bg: #e3f2fd;
+  --category-color: #1565c0;
+
+  --quote-bg: #f0f8fb;
+  --conclusion-bg: #f5fbfd;
+
+  --scrollbar-track: #e8f4f8;
+  --scrollbar-thumb: #90c1d4;
+  --scrollbar-thumb-hover: #6ba8c4;
+
+  --shadow: rgba(27, 58, 75, 0.08);
+  --shadow-hover: rgba(27, 58, 75, 0.15);
+}
