@@ -112,7 +112,7 @@ const Sidebar = () => {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1 }}
                     >
-                        <p>"Sólo sé que no sé nada"</p>
+                        <p>Yo no fui</p>
                         <span>- Sócrates</span>
                     </motion.div>
                 </div>

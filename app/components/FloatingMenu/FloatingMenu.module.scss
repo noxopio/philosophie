@@ -37,6 +37,8 @@
     left: 0;
     transform-origin: left center;
     z-index: 100;
+
+
 }
 
 .bookPages {
@@ -53,7 +55,7 @@
 .leftPage,
 .rightPage {
     flex: 1;
-    padding: 300px 30px;
+    padding: 200px 30px;
     position: relative;
 
     h3 {
@@ -63,6 +65,8 @@
         font-family: 'Georgia', serif;
         border-bottom: 2px solid var(--menu-border);
         padding-bottom: 10px;
+        writing-mode: sideways-lr;
+        text-orientation: upright;
     }
 }
 
