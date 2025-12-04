@@ -17,9 +17,37 @@
 
 .heroSection {
   padding: 80px 0 60px;
-  text-align: center;
   border-bottom: 3px solid var(--section-border);
   margin-bottom: 60px;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.heroLogo {
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.heroText {
+  flex: 1;
+  text-align: left;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .mainTitle {
@@ -39,8 +67,7 @@
   font-size: 1.3rem;
   color: var(--text-secondary);
   font-style: italic;
-  max-width: 700px;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.6;
 
   @media (max-width: 768px) {

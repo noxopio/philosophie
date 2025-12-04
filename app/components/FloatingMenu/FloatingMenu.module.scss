@@ -37,8 +37,25 @@
     left: 0;
     transform-origin: left center;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
 
+.logoContainer {
+    align-self: flex-start;
+    margin-bottom: 48px;
+    /* separa del título/menu */
+    /* opcional: tamaño fijo para controlar el layout */
+    width: 150px;
+    height: auto;
+    background: var(--menu-bg);
+    border: 3px solid var(--menu-border);
 
+    border-radius: 2% 2% 0 0;
+
+    img {
+        display: block;
+    }
 }
 
 .bookPages {
@@ -71,6 +88,13 @@
 }
 
 .leftPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* asegura que el contenido arranque arriba */
+    align-items: flex-start;
+    /* alinea a la izquierda */
+    padding: 32px;
     border-right: 2px solid var(--menu-border);
     background: linear-gradient(to right, var(--page-bg-left), var(--page-bg-center));
 }

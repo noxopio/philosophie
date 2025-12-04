@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './FloatingMenu.module.scss';
+import { getImageFilter } from '../utiils';
 
 const FloatingMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +16,7 @@ const FloatingMenu = () => {
         { label: 'Artículos', href: '#articulos' },
     ];
 
+
     return (
         <div className={styles.floatingMenu}>
             <motion.button
@@ -23,7 +26,15 @@ const FloatingMenu = () => {
                 whileTap={{ scale: 0.95 }}
             >
                 <span className={styles.bookSpine}>
-                    {isOpen ? '✕' : '☰'}
+                    {isOpen ? '✕' : (
+                        <img
+                            src="/philo.svg"
+                            alt="Philosophie"
+                            width={48}
+                            height={48}
+                            style={{ filter: getImageFilter() }}
+                        />
+                    )}
                 </span>
             </motion.button>
 
@@ -36,10 +47,26 @@ const FloatingMenu = () => {
                         exit={{ scaleX: 0, opacity: 0 }}
                         transition={{ duration: 0.4, ease: 'easeInOut' }}
                     >
+
                         <div className={styles.bookPages}>
+
+
                             <div className={styles.leftPage}>
+                                <div className={styles.logoContainer}>
+                                    <img
+                                        src="/philo.svg"
+                                        alt="Philosophie"
+                                        width={150}
+                                        height={150}
+                                        style={{ filter: getImageFilter() }}
+                                    />
+                                </div>
+
                                 <h3>Menu</h3>
+
+
                                 <ul className={styles.menuLinks}>
+
                                     {menuItems.map((item, index) => (
                                         <motion.li
                                             key={item.href}

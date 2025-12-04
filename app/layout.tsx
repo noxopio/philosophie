@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: "Philosophie",
   description: "Un viaje a través de las ideas filosóficas que han moldeado nuestra comprensión del mundo",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png"
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" }
+    ],
   }
 };
 

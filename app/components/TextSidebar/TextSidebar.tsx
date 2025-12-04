@@ -1,8 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
 'use client';
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import styles from './TextSidebar.module.scss';
 
 const TextSidebar = () => {

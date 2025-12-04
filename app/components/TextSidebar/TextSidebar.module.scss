@@ -10,6 +10,7 @@
     z-index: 10;
     box-shadow: 4px 0 12px var(--shadow);
 
+    /* evita repeticiones */
     &::-webkit-scrollbar {
         width: 8px;
     }
@@ -45,6 +46,7 @@
 
 .title {
     margin-top: 100%;
+
     padding-top: 25vh;
     padding-left: 10px;
     font-size: 3rem;
@@ -67,7 +69,6 @@
         padding-top: 0;
         font-size: 1.25rem;
         writing-mode: horizontal-tb;
-        /* sin cambiar la orientación */
         text-orientation: upright;
         display: inline-block;
         align-self: center;
