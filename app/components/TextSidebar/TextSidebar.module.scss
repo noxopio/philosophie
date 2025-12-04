@@ -26,6 +26,10 @@
             background: var(--scrollbar-thumb-hover);
         }
     }
+
+    @media (max-width: 900px) {
+        display: none;
+    }
 }
 
 
