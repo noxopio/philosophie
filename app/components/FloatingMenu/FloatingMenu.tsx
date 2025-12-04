@@ -38,7 +38,7 @@ const FloatingMenu = () => {
                     >
                         <div className={styles.bookPages}>
                             <div className={styles.leftPage}>
-                                <h3>Philosophie</h3>
+                                <h3>Menu</h3>
                                 <ul className={styles.menuLinks}>
                                     {menuItems.map((item, index) => (
                                         <motion.li

@@ -1,0 +1,48 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    border-right: 3px solid var(--sidebar-border);
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 4px 0 12px var(--shadow);
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--scrollbar-track);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb);
+        border-radius: 4px;
+
+        &:hover {
+            background: var(--scrollbar-thumb-hover);
+        }
+    }
+}
+
+
+.title {
+    margin-top: 100%;
+    font-size: 5rem;
+    writing-mode: sideways-lr;
+    text-orientation: upright;
+    text-shadow: 2px 2px 4px var(--sidebar-border);
+    text-shadow:
+        -3px -3px 4px var(--sidebar-border),
+        /* sombra superior-izquierda */
+        3px 3px 4px rgba(255, 255, 255, 0.85),
+        /* luz inferior-derecha */
+        0 10px 18px var(--shadow);
+    /* profundidad difusa */
+
+    /* contorno suave para separación del fondo */
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.25);
+}
