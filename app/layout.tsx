@@ -15,8 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Filosofía - Explorando el Pensamiento",
+  title: "Philosophie",
   description: "Un viaje a través de las ideas filosóficas que han moldeado nuestra comprensión del mundo",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png"
+  }
 };
 
 export default function RootLayout({
