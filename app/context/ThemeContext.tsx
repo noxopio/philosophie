@@ -12,20 +12,24 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
+    const [mounted, setMounted] = useState(false);
     const [theme, setTheme] = useState<Theme>('midnight');
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setMounted(true);
         const savedTheme = localStorage.getItem('philosophie-theme') as Theme;
         if (savedTheme) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
             setTheme(savedTheme);
         }
     }, []);
 
     useEffect(() => {
-        localStorage.setItem('philosophie-theme', theme);
-        document.documentElement.setAttribute('data-theme', theme);
-    }, [theme]);
+        if (mounted) {
+            localStorage.setItem('philosophie-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+    }, [theme, mounted]);
 
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}>
