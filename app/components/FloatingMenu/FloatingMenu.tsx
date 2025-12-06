@@ -3,17 +3,19 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import styles from './FloatingMenu.module.scss';
 import { getImageFilter } from '../utiils';
 
 const FloatingMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
 
     const menuItems = [
-        { label: 'Inicio', href: '#inicio' },
-        { label: 'Filósofos', href: '#filosofos' },
-        { label: 'Corrientes', href: '#corrientes' },
-        { label: 'Artículos', href: '#articulos' },
+        { label: 'Inicio', onClick: () => router.push('/') },
+        { label: 'Oriental', onClick: () => router.push('/oriental') },
+        { label: 'Corrientes', onClick: () => router.push('/corrientes') },
+        { label: 'Artículos', onClick: () => router.push('/articulos') },
     ];
 
 
@@ -69,12 +71,12 @@ const FloatingMenu = () => {
 
                                     {menuItems.map((item, index) => (
                                         <motion.li
-                                            key={item.href}
+                                            key={item.label}
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: index * 0.1 }}
                                         >
-                                            <a href={item.href} onClick={() => setIsOpen(false)}>
+                                            <a onClick={() => { item.onClick(); setIsOpen(false); }}>
                                                 {item.label}
                                             </a>
                                         </motion.li>
