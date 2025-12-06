@@ -15,16 +15,16 @@ interface Article {
     category: string;
 }
 
-const Oriental = () => {
+const Occidental = () => {
     const articles: Article[] = [
         {
             id: 1,
-            title: 'Pa kua',
-            subtitle: 'El símbolo de los ocho trigramas en la filosofía china',
+            title: 'Filosofía Medieval',
+            subtitle: 'La filosofía durante la Edad Media',
             content:
-                'El Pa kua o Bagua (‘ocho estados de cambio’) es el nombre que recibe un símbolo de origen chino compuesto por ocho trigramas (agrupaciones de tres líneas, unas sobre otras, algunas enteras y otras cortadas) ordenados de una manera determinada alrededor de un centro, el yin-yang. Cada trigrama representa un concepto fundamental de la filosofía china, como el cielo, la tierra, el trueno, el viento, el agua, el fuego, la montaña y el lago. El Pa kua es un símbolo central en el taoísmo y se utiliza en diversas prácticas filosóficas y espirituales chinas, incluyendo el feng shui y las artes marciales.',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bagua-name-later.svg/250px-Bagua-name-later.svg.png',
-            category: 'Filosofía Oriental',
+                'La filosofía medieval se extiende, a grandes rasgos, desde la cristianización del Imperio romano hasta el Renacimiento.[37]​ Se define, en parte, por el redescubrimiento y posterior desarrollo de la griega clásica y de la filosofía helenística, y, en parte, por la necesidad de abordar los problemas teológicos y de integrar las doctrinas sagradas, entonces muy extendidas, de la religión abrahámica. (Judaísmo, Cristianismo y Islam) con el aprendizaje del secular. Algunos problemas discutidos a lo largo de este periodo son la relación de la fe con la razón, la existencia y unidad de Dios, el objeto de la teología y la metafísica, los problemas del conocimiento, de los universales y de la individuación.',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/250px-Saint_Augustine_by_Philippe_de_Champaigne.jpg',
+            category: 'Filosofía Occidental',
         },
         {
             id: 2,
@@ -33,7 +33,7 @@ const Oriental = () => {
             content:
                 'El Pa kua o Bagua (‘ocho estados de cambio’) es el nombre que recibe un símbolo de origen chino compuesto por ocho trigramas (agrupaciones de tres líneas, unas sobre otras, algunas enteras y otras cortadas) ordenados de una manera determinada alrededor de un centro, el yin-yang. Cada trigrama representa un concepto fundamental de la filosofía china, como el cielo, la tierra, el trueno, el viento, el agua, el fuego, la montaña y el lago. El Pa kua es un símbolo central en el taoísmo y se utiliza en diversas prácticas filosóficas y espirituales chinas, incluyendo el feng shui y las artes marciales.',
             image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bagua-name-later.svg/250px-Bagua-name-later.svg.png',
-            category: 'Filosofía Oriental',
+            category: 'Filosofía Occidental',
         },
     ];
 
@@ -49,15 +49,9 @@ const Oriental = () => {
 
 
                     <div className={styles.heroText}>
-                        <h1 className={styles.mainTitle}>Filosofía Oriental</h1>
+                        <h1 className={styles.mainTitle}>Filosofía Occidental</h1>
                         <p className={styles.mainSubtitle}>
-                            El concepto de filosofía oriental surgió de la academia occidental para agrupar las
-                            diversas tradiciones filosóficas originadas en Asia, incluyendo las filosofías de
-                            China, India, Japón y otras regiones del continente. A diferencia de la filosofía
-                            occidental, que a menudo se centra en el análisis lógico y la argumentación
-                            sistemática, la filosofía oriental tiende a enfatizar la armonía con la naturaleza, la
-                            introspección y la búsqueda de la sabiduría a través de la experiencia directa y la
-                            meditación.
+                            La filosofía occidental engloba el pensamiento y la obra de la filosófica del mundo occidental. Históricamente, el término se refiere al pensamiento filosófico de la cultura occidental, empezando por la filosofía griega antigua de los presocráticos. La propia palabra filosofía tiene su origen en el griego antiguo philosophía (φιλοσοφία), literalmente, «el amor a la sabiduría» en griego antiguo: φιλεῖν phileîn, «amar» y σοφία sophía, «sabiduría».
                         </p>
                     </div>
                     <img
@@ -65,7 +59,7 @@ const Oriental = () => {
                         alt="Philosophie"
                         width={100}
                         height={100}
-                        // style={{ filter: getImageFilter() }}
+                        style={{ filter: getImageFilter() }}
                         className={styles.heroImage}
                     />
                 </div>
@@ -86,7 +80,7 @@ const Oriental = () => {
             >
                 <h2>Conclusión</h2>
                 <p>
-                    La filosofía oriental nos invita a reflexionar sobre nuestra existencia, la naturaleza del
+                    La filosofía Occidental nos invita a reflexionar sobre nuestra existencia, la naturaleza del
                     conocimiento y la búsqueda de la sabiduría. A través de las enseñanzas de grandes
                     pensadores como Sócrates, Platón y Aristóteles, podemos comprender mejor el mundo que nos
                     rodea y nuestro lugar en él. Este viaje filosófico no solo enriquece nuestra mente, sino
@@ -116,7 +110,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
                     alt={article.title}
                     width={120}
                     height={120}
-                    style={{ filter: imageFilter }}
+                // style={{ filter: imageFilter }}
                 />
             );
         }
@@ -149,4 +143,4 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
     );
 };
 
-export default Oriental;
+export default Occidental;

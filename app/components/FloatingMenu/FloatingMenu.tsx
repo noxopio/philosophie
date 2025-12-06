@@ -14,8 +14,9 @@ const FloatingMenu = () => {
     const menuItems = [
         { label: 'Inicio', onClick: () => router.push('/') },
         { label: 'Oriental', onClick: () => router.push('/oriental') },
-        { label: 'Corrientes', onClick: () => router.push('/corrientes') },
-        { label: 'Artículos', onClick: () => router.push('/articulos') },
+        { label: 'Occidental', onClick: () => router.push('/occidental') },
+        { label: 'Conclusiones', onClick: () => router.push('/conclusiones') },
+        { label: 'Bibliografía', onClick: () => router.push('/bibliografia') },
     ];
 
     return (

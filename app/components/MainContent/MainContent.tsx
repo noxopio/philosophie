@@ -92,7 +92,7 @@ const MainContent = () => {
                         className={styles.heroImage}
                     />
                     <div className={styles.heroText}>
-                        <h1 className={styles.mainTitle}>Explorando el Pensamiento Filosófico</h1>
+                        <h1 className={styles.mainTitle}>Cosmovision</h1>
                         <p className={styles.mainSubtitle}>
                             Un viaje a través de las ideas que han moldeado nuestro entendimiento del mundo
                         </p>
@@ -130,12 +130,25 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
-    // Call getImageFilter() unconditionally so any hooks it uses
-    // (via useTheme) are invoked in the same order on every render.
-    const imageFilter = getImageFilter();
-
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: '-100px' });
+    const imageFilter = getImageFilter();
+
+    const renderImage = (src: string | undefined) => {
+        if (!src) return null;
+        if (src.startsWith('http') || src.startsWith('/')) {
+            return (
+                <img
+                    src={src}
+                    alt={article.title}
+                    width={120}
+                    height={120}
+                    style={{ filter: imageFilter }}
+                />
+            );
+        }
+        return <span>{src}</span>;
+    };
 
     return (
         <motion.article
@@ -147,17 +160,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
         >
             <div className={styles.articleHeader}>
                 <div className={styles.articleImage}>
-                    {article.image && article.image.startsWith('http') ? (
-                        <img
-                            src={article.image}
-                            alt={article.title}
-                            width={120}
-                            height={120}
-                            style={{ filter: imageFilter }}
-                        />
-                    ) : (
-                        <span>{article.image}</span>
-                    )}
+                    {renderImage(article.image)}
                 </div>
                 <div className={styles.articleMeta}>
                     <span className={styles.category}>{article.category}</span>
