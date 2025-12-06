@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React,
-{ useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import styles from './oriental.module.scss';
+import styles from '../shared/PageLayout.module.scss';
 import { getImageFilter } from '../utiils';
+import { useRef } from 'react';
 
 interface Article {
     id: number;
@@ -15,7 +14,6 @@ interface Article {
     image: string;
     category: string;
 }
-
 const Oriental = () => {
     const articles: Article[] = [{
         id: 1,
@@ -24,32 +22,55 @@ const Oriental = () => {
         content: 'Sócrates revolucionó la filosofía griega con su método dialéctico, conocido como mayéutica. A través del diálogo y las preguntas, buscaba que sus interlocutores descubrieran por sí mismos la verdad. Su famosa frase "Conócete a ti mismo" sigue siendo un pilar fundamental del pensamiento filosófico occidental.',
         image: '',
         category: 'Filosofía Antigua',
-    }
-    ];
+    }];
     return (<main className={
-        styles.Oriental
+        styles.mainContent
     }
     > <motion.header className={
         styles.heroSection
     }
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-            duration: 0.8
+        initial={
+            {
+                opacity: 0, y: 30
+            }
         }
-        }
-    > <div className={styles.heroContent} >
-                <img src="/philo.svg"
-                    alt="Philosophie"
-                    width={150}
-                    height={150}
-                    style={
-                        {
-                            filter: getImageFilter()
-                        }
-                    }
 
-                    className={styles.heroImage}
+        animate={
+            {
+                opacity: 1, y: 0
+            }
+        }
+
+        transition={
+            {
+                duration: 0.8
+            }
+        }
+
+    > <div className={
+        styles.heroContent
+    }
+
+    > <img src="/philo.svg"
+        alt="Philosophie"
+
+        width={
+            150
+        }
+
+        height={
+            150
+        }
+
+        style={
+            {
+                filter: getImageFilter()
+            }
+        }
+
+        className={
+            styles.heroImage
+        }
 
                 /> <div className={
                     styles.heroText
@@ -111,13 +132,7 @@ const Oriental = () => {
                 }
             }
 
-        > <h2>El Legado Filosófico</h2>
-            <p>
-                La filosofía nos invita a cuestionar, reflexionar y buscar la verdad. Desde los antiguos griegos hasta los pensadores contemporáneos, cada época ha aportado nuevas perspectivas que enriquecen nuestra comprensión de la existencia, el conocimiento y la moralidad.
-
-            </p>
-        </motion.section>
-    </main>);
+        > <h2>El Legado Filosófico</h2> <p> La filosofía nos invita a cuestionar, reflexionar y buscar la verdad. Desde los antiguos griegos hasta los pensadores contemporáneos, cada época ha aportado nuevas perspectivas que enriquecen nuestra comprensión de la existencia, el conocimiento y la moralidad. </p> </motion.section> </main>);
 }
 
     ;
@@ -170,24 +185,39 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
             }
         }
 
-    > <div className={styles.articleHeader}
+    > <div className={
+        styles.articleHeader
+    }
 
-    > <div className={styles.articleImage}
+    > <div className={
+        styles.articleImage
+    }
 
-    > {article.image}
+    > {
+                    article.image
+                }
 
-            </div>
-            <div className={styles.articleMeta} >
-                <span className={styles.category}>
-                    {article.category}
-                </span>
-                <h2 className={styles.articleTitle}  >
-                    {
+            </div> <div className={
+                styles.articleMeta
+            }
+
+            > <span className={
+                styles.category
+            }
+
+            > {
+                        article.category
+                    }
+
+                </span> <h2 className={
+                    styles.articleTitle
+                }
+
+                > {
                         article.title
                     }
 
-                </h2>
-                <h3 className={
+                </h2> <h3 className={
                     styles.articleSubtitle
                 }
 
@@ -203,23 +233,23 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
                     article.content
                 }
 
-            </p>
-        </div>
-
-        <motion.button className={
-            styles.readMore
-        }
-
-            whileHover={
-                { scale: 1.05 }
+            </p> </div> <motion.button className={
+                styles.readMore
             }
 
-            whileTap={
-                { scale: 0.95 }
-            }
+                whileHover={
+                    {
+                        scale: 1.05
+                    }
+                }
 
-        > Leer más → </motion.button>
-    </motion.article>);
+                whileTap={
+                    {
+                        scale: 0.95
+                    }
+                }
+
+            > Leer más → </motion.button> </motion.article>);
 }
 
     ;

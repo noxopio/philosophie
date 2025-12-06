@@ -4,7 +4,7 @@
 import React,
 { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import styles from './MainContent.module.scss';
+import styles from '../shared/PageLayout.module.scss';
 import { getImageFilter } from '../utiils';
 
 interface Article {
