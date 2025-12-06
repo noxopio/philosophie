@@ -15,7 +15,7 @@ interface Article {
     category: string;
 }
 
-const Occidental = () => {
+const Bibiliografia = () => {
     const articles: Article[] = [
         {
             id: 1,
@@ -24,7 +24,7 @@ const Occidental = () => {
             content:
                 'La filosofía medieval se extiende, a grandes rasgos, desde la cristianización del Imperio romano hasta el Renacimiento.[37]​ Se define, en parte, por el redescubrimiento y posterior desarrollo de la griega clásica y de la filosofía helenística, y, en parte, por la necesidad de abordar los problemas teológicos y de integrar las doctrinas sagradas, entonces muy extendidas, de la religión abrahámica. (Judaísmo, Cristianismo y Islam) con el aprendizaje del secular. Algunos problemas discutidos a lo largo de este periodo son la relación de la fe con la razón, la existencia y unidad de Dios, el objeto de la teología y la metafísica, los problemas del conocimiento, de los universales y de la individuación.',
             image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/250px-Saint_Augustine_by_Philippe_de_Champaigne.jpg',
-            category: 'Filosofía Occidental',
+            category: 'Filosofía Bibiliografia',
         },
         {
             id: 2,
@@ -33,7 +33,7 @@ const Occidental = () => {
             content:
                 'El Renacimiento fue un periodo de renovación cultural e intelectual en Europa que abarcó aproximadamente desde el siglo XIV hasta el siglo XVII. Durante este tiempo, hubo un resurgimiento del interés por la filosofía, el arte y la ciencia de la antigüedad clásica. El Humanismo, una corriente filosófica central del Renacimiento, enfatizaba el valor y la dignidad del individuo, así como la importancia de la educación y el estudio de las humanidades (literatura, historia, filosofía). Filósofos como Pico della Mirandola y Erasmus promovieron ideas que desafiaban las doctrinas medievales y sentaron las bases para el pensamiento moderno.',
             image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Giordano_Bruno_Campo_dei_Fiori.jpg/250px-Giordano_Bruno_Campo_dei_Fiori.jpg',
-            category: 'Filosofía Occidental',
+            category: 'Filosofía Bibiliografia',
         },
     ];
 
@@ -47,21 +47,21 @@ const Occidental = () => {
             >
                 <div className={styles.heroContent}>
 
-
-                    <div className={styles.heroText}>
-                        <h1 className={styles.mainTitle}>Filosofía Occidental</h1>
-                        <p className={styles.mainSubtitle}>
-                            La filosofía occidental engloba el pensamiento y la obra de la filosófica del mundo occidental. Históricamente, el término se refiere al pensamiento filosófico de la cultura occidental, empezando por la filosofía griega antigua de los presocráticos. La propia palabra filosofía tiene su origen en el griego antiguo philosophía (φιλοσοφία), literalmente, «el amor a la sabiduría» en griego antiguo: φιλεῖν phileîn, «amar» y σοφία sophía, «sabiduría».
-                        </p>
-                    </div>
                     <img
-                        src="/grecia.svg"
-                        alt="Imagen representativa de la filosofía occidental"
-                        width={400}
-                        height={400}
+                        src="/book.svg"
+                        alt="Book Icon"
+                        width={250}
+                        height={250}
                         style={{ filter: getImageFilter() }}
                         className={styles.heroImage}
                     />
+
+                    <div className={styles.heroText}>
+                        <h1 className={styles.mainTitle}> Bibiliografia</h1>
+                        <p className={styles.mainSubtitle}>
+                            Bibliografia de las principales obras y autores que han influido en la filosofía a lo largo de la historia.
+                        </p>
+                    </div>
                 </div>
             </motion.header>
 
@@ -80,11 +80,7 @@ const Occidental = () => {
             >
                 <h2>Conclusión</h2>
                 <p>
-                    La filosofía Occidental nos invita a reflexionar sobre nuestra existencia, la naturaleza del
-                    conocimiento y la búsqueda de la sabiduría. A través de las enseñanzas de grandes
-                    pensadores como Sócrates, Platón y Aristóteles, podemos comprender mejor el mundo que nos
-                    rodea y nuestro lugar en él. Este viaje filosófico no solo enriquece nuestra mente, sino
-                    que también nos guía hacia una vida más plena y consciente.
+                    Bibliografia.
                 </p>
             </motion.section>
         </main>
@@ -143,4 +139,4 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
     );
 };
 
-export default Occidental;
+export default Bibiliografia;
