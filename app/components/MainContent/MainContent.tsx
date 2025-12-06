@@ -71,59 +71,47 @@ const MainContent = () => {
     return (<main className={
         styles.mainContent
     }
-    > <motion.header className={
-        styles.heroSection
+    > <motion.header className={styles.heroSection} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{
+        duration: 0.8
     }
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-            duration: 0.8
-        }
-        }
+    }
     > <div className={styles.heroContent} >
                 <img src="/philo.svg"
                     alt="Philosophie"
                     width={150}
                     height={150}
-                    style={
-                        {
-                            filter: getImageFilter()
-                        }
+                    style={{
+                        filter: getImageFilter()
+                    }
                     }
 
                     className={styles.heroImage}
 
-                /> <div className={
-                    styles.heroText
-                }
+                />
+                <div className={styles.heroText}
+                >
+                    <h1 className={styles.mainTitle}>
+                        Explorando el Pensamiento Filosófico
+                    </h1>
+                    <p className={styles.mainSubtitle}
 
-                > <h1 className={
-                    styles.mainTitle
-                }
-
-                >Explorando el Pensamiento Filosófico</h1> <p className={
-                    styles.mainSubtitle
-                }
-
-                > Un viaje a través de las ideas que han moldeado nuestro entendimiento del mundo </p> </div> </div> </motion.header> <div className={
-                    styles.articlesContainer
-                }
-
-                > {
-                articles.map((article, index) => (<ArticleCard key={
-                    article.id
-                }
-
-                    article={
-                        article
-                    }
-
-                    index={
-                        index
-                    }
-
-                />))
+                    > Un viaje a través de las ideas que han moldeado nuestro entendimiento del mundo </p> </div> </div>
+        </motion.header>
+        <div className={styles.articlesContainer}                > {
+            articles.map((article, index) => (<ArticleCard key={
+                article.id
             }
+
+                article={
+                    article
+                }
+
+                index={
+                    index
+                }
+
+            />))
+        }
 
         </div> <motion.section className={
             styles.conclusionSection
