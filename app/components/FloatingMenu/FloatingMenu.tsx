@@ -18,9 +18,9 @@ const FloatingMenu = () => {
         { label: 'Artículos', onClick: () => router.push('/articulos') },
     ];
 
-
     return (
         <div className={styles.floatingMenu}>
+            {/* Botón de apertura/cierre */}
             <motion.button
                 className={styles.toggleButton}
                 onClick={() => setIsOpen(!isOpen)}
@@ -28,7 +28,9 @@ const FloatingMenu = () => {
                 whileTap={{ scale: 0.95 }}
             >
                 <span className={styles.bookSpine}>
-                    {isOpen ? '✕' : (
+                    {isOpen ? (
+                        '✕'
+                    ) : (
                         <img
                             src="/philo.svg"
                             alt="Philosophie"
@@ -40,6 +42,7 @@ const FloatingMenu = () => {
                 </span>
             </motion.button>
 
+            {/* Menú desplegable */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -49,11 +52,9 @@ const FloatingMenu = () => {
                         exit={{ scaleX: 0, opacity: 0 }}
                         transition={{ duration: 0.4, ease: 'easeInOut' }}
                     >
-
                         <div className={styles.bookPages}>
-
-
                             <div className={styles.leftPage}>
+                                {/* Logo */}
                                 <div className={styles.logoContainer}>
                                     <img
                                         src="/philo.svg"
@@ -64,11 +65,10 @@ const FloatingMenu = () => {
                                     />
                                 </div>
 
-                                <h3>Menu</h3>
+                                <h3>Menú</h3>
 
-
+                                {/* Links */}
                                 <ul className={styles.menuLinks}>
-
                                     {menuItems.map((item, index) => (
                                         <motion.li
                                             key={item.label}
@@ -76,7 +76,12 @@ const FloatingMenu = () => {
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: index * 0.1 }}
                                         >
-                                            <a onClick={() => { item.onClick(); setIsOpen(false); }}>
+                                            <a
+                                                onClick={() => {
+                                                    item.onClick();
+                                                    setIsOpen(false);
+                                                }}
+                                            >
                                                 {item.label}
                                             </a>
                                         </motion.li>
