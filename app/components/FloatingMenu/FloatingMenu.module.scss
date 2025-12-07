@@ -3,6 +3,18 @@
     top: 20px;
     left: 20px;
     z-index: 1000;
+
+    h6 {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        color: var(--menu-text);
+        display: flex;
+        justify-content: center;
+        font-family: var(--font-sans);
+        align-self: center;
+
+    }
+
 }
 
 .toggleButton {
@@ -24,6 +36,16 @@
 
     &:hover {
         box-shadow: 0 6px 16px var(--shadow-hover);
+
+        // ::before {
+        //     content: 'Menú';
+        //     position: absolute;
+        //     bottom: -20px;
+        //     font-size: 0.8rem;
+        //     color: var(--menu-text);
+        //     left: 9px;
+
+        // }
     }
 }
 
@@ -168,4 +190,19 @@
     font-size: 0.9rem;
     color: var(--text-color);
     font-weight: 500;
+}
+
+
+
+.introText {
+    position: absolute;
+    left: 9px;
+    top: 5rem;
+    // transform: translate(-50%, -10%);
+    pointer-events: none;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    z-index: 20;
+    will-change: transform, opacity;
 }

@@ -1,9 +1,9 @@
-import Bibiliografia from "../components/BibiliografiaPhilosophie/Bibiliografia";
+import Bibliografia from "../components/BibliografiaPhilosophie/Bibliografia";
 
 export default function conclusiones() {
     return (
         <>
-            <Bibiliografia />
+            <Bibliografia />
         </>
     );
 }

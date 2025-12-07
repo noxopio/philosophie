@@ -8,9 +8,13 @@ const TextSidebar = () => {
     return (
         <>
             <aside className={`${styles.sidebar}`}>
-                <h1 className={styles.title}>
+                <h1 className={styles.title}
+
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
 
                     PHILOSOPHIE
+
                 </h1>
             </aside>
         </>

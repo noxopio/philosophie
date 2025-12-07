@@ -1,14 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import styles from './FloatingMenu.module.scss';
 import { getImageFilter } from '../utiils';
 
-const FloatingMenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
+type FloatingMenuProps = {
+    isOpen?: boolean;
+    setIsOpen?: (v: boolean) => void;
+    setThemeOpen?: (v: boolean) => void;
+};
+
+const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
+    const [localOpen, setLocalOpen] = useState(false);
+    const isOpen = props.isOpen ?? localOpen;
+    const [showIntroText, setShowIntroText] = useState(true);
+    const setIsOpen = props.setIsOpen ?? setLocalOpen;
+    const setThemeOpen = props.setThemeOpen ?? (() => { });
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        function handleOutside(e: MouseEvent) {
+            if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+                setIsOpen(false);
+            }
+        }
+        function handleEsc(e: KeyboardEvent) {
+            if (e.key === 'Escape') setIsOpen(false);
+        }
+        document.addEventListener('mousedown', handleOutside);
+        document.addEventListener('keydown', handleEsc);
+        return () => {
+            document.removeEventListener('mousedown', handleOutside);
+            document.removeEventListener('keydown', handleEsc);
+        };
+    }, [setIsOpen]);
     const router = useRouter();
 
     const menuItems = [
@@ -21,29 +49,55 @@ const FloatingMenu = () => {
     ];
 
     return (
-        <div className={styles.floatingMenu}>
+        <div className={styles.floatingMenu} ref={containerRef}>
+
             {/* Botón de apertura/cierre */}
             <motion.button
                 className={styles.toggleButton}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => {
+                    const next = !isOpen;
+                    setIsOpen(next);
+                    if (next) setThemeOpen(false);
+                }}
+                initial={{ scale: 1.5 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 2 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                title="Menú"
+                onAnimationComplete={() => setShowIntroText(false)}
+
             >
+
                 <span className={styles.bookSpine}>
                     {isOpen ? (
                         '✕'
                     ) : (
                         <img
                             src="/philo.svg"
-                            alt="Philosophie"
+                            alt="Menú"
                             width={48}
                             height={48}
                             style={{ filter: getImageFilter() }}
+                            className={styles.menuIcon}
                         />
                     )}
                 </span>
-            </motion.button>
 
+            </motion.button>
+            <AnimatePresence>
+                {showIntroText && (
+                    <motion.span
+                        className={styles.introText}
+                        initial={{ opacity: 0, y: -4, scale: 1.2 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                    >
+                        Menú
+                    </motion.span>
+                )}
+            </AnimatePresence>
             {/* Menú desplegable */}
             <AnimatePresence>
                 {isOpen && (
@@ -58,6 +112,7 @@ const FloatingMenu = () => {
                             <div className={styles.leftPage}>
                                 {/* Logo */}
                                 <div className={styles.logoContainer}>
+
                                     <img
                                         src="/philo.svg"
                                         alt="Philosophie"
@@ -83,6 +138,9 @@ const FloatingMenu = () => {
                                                     item.onClick();
                                                     setIsOpen(false);
                                                 }}
+                                                role="button"
+                                                tabIndex={0}
+                                                onKeyDown={(e) => { if (e.key === 'Enter') { item.onClick(); setIsOpen(false); } }}
                                             >
                                                 {item.label}
                                             </a>

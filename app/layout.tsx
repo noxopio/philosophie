@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "./context/ThemeContext";
-import FloatingMenu from './components/FloatingMenu/FloatingMenu';
-import ThemeSelector from './components/Theme/ThemeSelector';
+import FloatingMenuWrapper from './components/FloatingMenuWrapper/FloatingMenuWrapper';
 import { TextSidebar } from './components/TextSidebar/TextSidebar';
 import "./globals.css";
 import "./styles/themes.scss";
@@ -38,8 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <FloatingMenu />
-          <ThemeSelector />
+          <FloatingMenuWrapper />
           <TextSidebar />
           {children}
         </ThemeProvider>
@@ -47,3 +45,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
