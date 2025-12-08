@@ -59,7 +59,8 @@ h6 {
 
 /* Bibliography list styling for consistent design */
 .bibliographyList {
-  list-style: decimal; /* numeric markers */
+  list-style: decimal;
+  /* numeric markers */
   margin: 1rem 0 1.5rem 0;
   padding-left: 1.25rem;
   counter-reset: bib-item;
@@ -69,7 +70,7 @@ h6 {
   margin: 0.6rem 0;
   padding: 12px 14px;
   border-radius: 8px;
-  background: var(--card-bg, rgba(0,0,0,0.03));
+  background: var(--card-bg, rgba(0, 0, 0, 0.03));
   color: var(--text-color);
   font-family: 'Georgia', serif;
   line-height: 1.4;

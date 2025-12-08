@@ -101,9 +101,25 @@ const Bibliografia = () => {
                         Eduardo M. Ortega Martín, (2022). La lectio Divina en el occidente medieval (ss. X-XIII): Análisis comparativo con otras religiones de oriente. - Artículo,  Universidad Loyola.
                     </li>
                     <li>
-                        <li>
-                            Recursos de imágenes SVG:svgsilh -    https://svgsilh.com/es/
-                        </li>
+                        Recursos de imágenes SVG:svgsilh - https://svgsilh.com/es/
+                    </li>
+                    <li>
+                        Recursos de imágenes SVG: pixabay -   https://pixabay.com/illustrations/compass-north-south-direction-1437379/
+                    </li>
+                    <li>
+                        Recursos de imágenes SVG: pixabay - https://pixabay.com/vectors/books-open-reading-literature-32522/
+                    </li>
+                    <li>
+                        Recursos de imágenes SVG: pixabay -  https://pixabay.com/illustrations/koi-carp-fish-water-japanese-pond-1244816/
+                    </li>
+                    <li>
+                        Recursos de imágenes SVG: pixabay -  https://pixabay.com/vectors/buddha-buddhism-flower-line-art-1817648/
+                    </li>
+                    <li>
+                        Recursos de imágenes SVG: pixabay -  https://pixabay.com/vectors/cyber-security-word-computer-cloud-2120014/
+                    </li>
+                    <li>
+                        Recursos de imágenes SVG: pixabay - https://pixabay.com/illustrations/brain-mind-psychology-idea-hearts-2062051/
                     </li>
 
                 </ol>

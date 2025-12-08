@@ -47,12 +47,18 @@ const Conclusiones = () => {
                         className={styles.heroImage}
                     />
                 </div>
+                <h1 style={{ fontSize: '27px' }}>
+                    Diana Rocio Delgadillo Pinzon
+                </h1>
             </motion.header>
 
             <div className={styles.articlesContainer}>
                 {articles.map((article, index) => (
                     <ArticleCard key={article.id} article={article} index={index} />
                 ))}
+                {/* <p>
+                    Diana Rocio Delgadillo Pinzon
+                </p> */}
             </div>
 
             {/* <motion.section
@@ -62,11 +68,10 @@ const Conclusiones = () => {
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.8 }}
             >
-                <h2>Conclusión</h2>
                 <p>
-                    Cada una de las corrientes filosoficas son un reflejo de la sociedad y cultura de su tiempo, y juntas
-                    ofrecen una visión rica y diversa de la búsqueda humana por comprender el mundo y nuestro lugar en él.
+                    Diana Rocio Delgadillo Pinzon
                 </p>
+
             </motion.section> */}
         </main>
     );
