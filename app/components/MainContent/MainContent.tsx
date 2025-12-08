@@ -5,6 +5,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import styles from '../shared/PageLayout.module.scss';
 import { getImageFilter } from '../utiils';
+import { useTheme } from '@/app/context/ThemeContext';
 
 interface Article {
     id: number;
@@ -17,6 +18,7 @@ interface Article {
 
 const ying = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bagua-name-later.svg/250px-Bagua-name-later.svg.png';
 const MainContent = () => {
+    const { theme } = useTheme();
     const articles: Article[] = [
         {
             id: 1,
@@ -119,7 +121,7 @@ const MainContent = () => {
                         alt="Philosophie"
                         width={150}
                         height={150}
-                        style={{ filter: getImageFilter() }}
+                        style={{ filter: getImageFilter(theme) }}
                         className={styles.heroImage}
                     />
                     <div className={styles.heroText}>
@@ -171,9 +173,10 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
+    const { theme } = useTheme();
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: '-100px' });
-    const imageFilter = getImageFilter();
+    const imageFilter = getImageFilter(theme);
 
     const renderImage = (src: string | undefined) => {
         if (!src) return null;

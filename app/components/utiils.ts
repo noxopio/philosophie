@@ -1,9 +1,4 @@
-import { useTheme } from '@/app/context/ThemeContext';
-
-
-export const getImageFilter = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { theme } = useTheme();
+export const getImageFilter = (theme: string) => {
     switch (theme) {
         case 'classic':
         // case 'midnight':
@@ -14,7 +9,6 @@ export const getImageFilter = () => {
         case 'ocean':
             return 'invert(0.4) sepia(1) saturate(3) hue-rotate(170deg)'; // Tono azul océano
         case 'cyberpunk':
-
             return 'invert(0.5) sepia(1) saturate(4) hue-rotate(270deg) brightness(1.2)'; // Tono neón
         default:
             return 'none';

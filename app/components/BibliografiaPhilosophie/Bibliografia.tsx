@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import styles from '../shared/PageLayout.module.scss';
 import { getImageFilter } from '../utiils';
+import { useTheme } from '@/app/context/ThemeContext';
 
 interface Article {
     id: number;
@@ -16,6 +17,7 @@ interface Article {
 }
 
 const Bibliografia = () => {
+    const { theme } = useTheme();
     const articles: Article[] = [];
 
     return (
@@ -32,7 +34,7 @@ const Bibliografia = () => {
                         alt="Book Icon"
                         width={250}
                         height={250}
-                        style={{ filter: getImageFilter() }}
+                        style={{ filter: getImageFilter(theme) }}
                         className={styles.heroImage}
                     />
 

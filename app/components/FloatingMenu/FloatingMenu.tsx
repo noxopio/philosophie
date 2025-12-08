@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import styles from './FloatingMenu.module.scss';
 import { getImageFilter } from '../utiils';
+import { useTheme } from '@/app/context/ThemeContext';
 
 type FloatingMenuProps = {
     isOpen?: boolean;
@@ -14,6 +15,7 @@ type FloatingMenuProps = {
 };
 
 const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
+    const { theme } = useTheme();
     const [localOpen, setLocalOpen] = useState(false);
     const isOpen = props.isOpen ?? localOpen;
     const [showIntroText, setShowIntroText] = useState(true);
@@ -78,7 +80,7 @@ const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
                             alt="Menú"
                             width={48}
                             height={48}
-                            style={{ filter: getImageFilter() }}
+                            style={{ filter: getImageFilter(theme) }}
                             className={styles.menuIcon}
                         />
                     )}
@@ -118,7 +120,7 @@ const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
                                         alt="Philosophie"
                                         width={150}
                                         height={150}
-                                        style={{ filter: getImageFilter() }}
+                                        style={{ filter: getImageFilter(theme) }}
                                     />
                                 </div>
 

@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import styles from '../shared/PageLayout.module.scss';
 import { getImageFilter } from '../utiils';
 import { useRef } from 'react';
+import { useTheme } from '@/app/context/ThemeContext';
 
 interface Article {
     id: number;
@@ -16,6 +17,7 @@ interface Article {
 }
 
 const Occidental = () => {
+    const { theme } = useTheme();
     const articles: Article[] = [
         {
             id: 1,
@@ -59,7 +61,7 @@ const Occidental = () => {
                         alt="Imagen representativa de la filosofía occidental"
                         width={400}
                         height={400}
-                        style={{ filter: getImageFilter() }}
+                        style={{ filter: getImageFilter(theme) }}
                         className={styles.heroImage}
                     />
                 </div>

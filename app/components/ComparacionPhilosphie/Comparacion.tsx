@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import styles from '../shared/PageLayout.module.scss';
 import { getImageFilter } from '../utiils';
 import { useRef } from 'react';
+import { useTheme } from '@/app/context/ThemeContext';
 
 interface Article {
     id: number;
@@ -16,6 +17,7 @@ interface Article {
 }
 
 const Comparacion = () => {
+    const { theme } = useTheme();
     const articles: Article[] = [
         {
             id: 1,
@@ -48,8 +50,7 @@ Una mirada positiva que nos dejan los avances tecnológicos y las herramientas e
                         alt="vientos"
                         width={250}
                         height={250}
-                        style={{ filter: getImageFilter() }}
-
+                        style={{ filter: getImageFilter(theme) }}
                         className={styles.heroImage}
                     />
 
@@ -59,6 +60,27 @@ Una mirada positiva que nos dejan los avances tecnológicos y las herramientas e
                             La tecnología es pues el nuevo dogma de la civilización, en la practicidad productiva constante, y una carrera de consumo donde el ser encuentra su realización y felicidad cuando llega a la meta, en la adquisición de la materia misma.
 
                         </p>
+
+
+                    </div>
+                    <div style={{ display: 'flex', gap: '20px', flexDirection: 'row' }}>
+
+                        <img
+                            src="/technology.svg"
+                            alt="technology"
+                            width={250}
+                            height={250}
+                            style={{ filter: getImageFilter(theme) }}
+                            className={styles.heroImage}
+                        />
+                        <img
+                            src="/buda.svg"
+                            alt="buda"
+                            width={250}
+                            height={250}
+                            style={{ filter: getImageFilter(theme) }}
+                            className={styles.heroImage}
+                        />
                     </div>
                 </div>
             </motion.header>
