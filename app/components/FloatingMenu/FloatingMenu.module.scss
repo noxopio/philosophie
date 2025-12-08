@@ -205,4 +205,9 @@
     color: var(--text-color);
     z-index: 20;
     will-change: transform, opacity;
+
+
+    &:hover {
+        cursor: none;
+    }
 }

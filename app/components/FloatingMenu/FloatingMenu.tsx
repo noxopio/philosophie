@@ -75,6 +75,7 @@ const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
                     {isOpen ? (
                         '✕'
                     ) : (
+
                         // <img
                         //     src="/philo.svg"
                         //     alt="Menú"
@@ -96,7 +97,7 @@ const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 4 }}
                         transition={{ duration: 30 }}
-                        style={{ cursor: 'none' }}
+
                     >
                         Menú
                     </motion.span>

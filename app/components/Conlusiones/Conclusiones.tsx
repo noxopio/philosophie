@@ -48,7 +48,7 @@ const Conclusiones = () => {
                     />
                 </div>
                 <h1 style={{ fontSize: '27px' }}>
-                    Diana Rocio Delgadillo Pinzon
+                    Diana Rocio Delgadillo Pinzón
                 </h1>
             </motion.header>
 
@@ -56,9 +56,7 @@ const Conclusiones = () => {
                 {articles.map((article, index) => (
                     <ArticleCard key={article.id} article={article} index={index} />
                 ))}
-                {/* <p>
-                    Diana Rocio Delgadillo Pinzon
-                </p> */}
+
             </div>
 
             {/* <motion.section
@@ -68,9 +66,7 @@ const Conclusiones = () => {
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.8 }}
             >
-                <p>
-                    Diana Rocio Delgadillo Pinzon
-                </p>
+               
 
             </motion.section> */}
         </main>
