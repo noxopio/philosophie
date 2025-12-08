@@ -23,7 +23,7 @@ const MainContent = () => {
         {
             id: 1,
             title: 'Cosmovisión Oriental',
-            subtitle: 'La unidad del ser y la dualidad',
+            subtitle: 'La liberación del sufrimiento y la comprensión de la realidad',
             content: (<>
                 <p>
                     La palabra Oriente, que designa al Este, en relación con Europa, procede de la
@@ -53,13 +53,13 @@ const MainContent = () => {
                 <p><b>•Espiritual: </b>  La espiritualidad hindú se manifiesta a través de la práctica de yoga, la meditacion y rituales que buscan la liberación del ciclo de reencarnaciones y la unión con lo sagrado. </p>
                 <p><b>•Descripción: </b>  Se desarrollo en regiones como India, China y Japón. A diferencia de la filosofía occidental, que se basa en el razonamiento lógico, la filosofía oriental se enfoca en la experiencia directa y el desarrollo personal. </p>
             </>),
-            image: ying,
+            image: "☯️",
             category: 'Filosofía Oriental',
         },
         {
             id: 2,
             title: 'Cosmovisión Occidental',
-            subtitle: 'La teoría de las Ideas y el mundo sensible',
+            subtitle: 'Para los humanos, el alma es la esencia',
             content: (<>
                 <p>
                     El Occidente, es el horizonte donde el sol se pone o muere. Tradicionalmente
@@ -127,10 +127,10 @@ const MainContent = () => {
                     <div className={styles.heroText}>
                         <h1 className={styles.mainTitle}>Introducción</h1>
                         <p className={styles.mainSubtitle}>
-                            La disociación que evidenciamos sobre el Ser desde el principio no es más que
+                            La disociación que evidenciamos sobre el Ser desde el principio ,no es más que
                             la divina creación de sí mismo por sí mismo y para sí, en la representación de
                             la imagen en conjunto, elaborada por las partes del alma y las partes del
-                            cuerpo, esta imagen es la acción de su creación, de su mundo. Así pues, el ser
+                            cuerpo, esta imagen es la acción de su creación, de su mundo. El ser
                             humano en su búsqueda incansable por el conocimiento y la plenitud, se ha
                             cuestionado sobre temas como la existencia y el propósito del hombre,
                             creando formas filosóficas y religiones que han proporcionado identidad

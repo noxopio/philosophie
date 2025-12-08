@@ -64,18 +64,18 @@ Una mirada positiva que nos dejan los avances tecnológicos y las herramientas e
 
                     </div>
                     <div style={{ display: 'flex', gap: '20px', flexDirection: 'row' }}>
-
                         <img
-                            src="/technology.svg"
-                            alt="technology"
+                            src="/buda.svg"
+                            alt="buda"
                             width={250}
                             height={250}
                             style={{ filter: getImageFilter(theme) }}
                             className={styles.heroImage}
                         />
+
                         <img
-                            src="/buda.svg"
-                            alt="buda"
+                            src="/technology.svg"
+                            alt="technology"
                             width={250}
                             height={250}
                             style={{ filter: getImageFilter(theme) }}

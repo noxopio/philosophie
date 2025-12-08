@@ -64,43 +64,46 @@ const Bibliografia = () => {
 
                 <ol className="bibliographyList">
                     <li>
-                        Panikkar, R. (2015). <em>Obras completas. Tomo I: Mística y espiritualidad. Vol. 1: Mística, plenitud de vida</em>. Herder.
-                        <br />
-                        <a className="link" href="https://doi-org.bibliotecavirtual.unad.edu.co/10.2307/j.ctvt9jzpr" target="_blank" rel="noopener noreferrer">
+                        Panikkar, R. (2015). Obras completas. Tomo I: Mística y espiritualidad. Vol. 1: Mística, plenitud de vida. Herder.
+
+                        {/* <a className="link" href="https://doi-org.bibliotecavirtual.unad.edu.co/10.2307/j.ctvt9jzpr" target="_blank" rel="noopener noreferrer">
                             <svg className="linkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
                                 <path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z" />
                             </svg>
                             https://doi-org.bibliotecavirtual.unad.edu.co/10.2307/j.ctvt9jzpr
-                        </a>
+                        </a> */}
                     </li>
                     <li>
-                        Aristóteles. (1978). <em>Acerca del alma</em> Editorial Gredos.
-                        <br />
-                        <a className="link" href="https://eltalondeaquiles.pucp.edu.pe/wp-content/uploads/2015/09/Aristoteles-Acerca-del-alma.-Gredos.-Trad-Tomas-Calvo.pdf" target="_blank" rel="noopener noreferrer">
+                        Aristóteles. (1978). Acerca del alma Editorial Gredos.
+                        {/* <a className="link" href="https://eltalondeaquiles.pucp.edu.pe/wp-content/uploads/2015/09/Aristoteles-Acerca-del-alma.-Gredos.-Trad-Tomas-Calvo.pdf" target="_blank" rel="noopener noreferrer">
                             <svg className="linkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
                                 <path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z" />
                             </svg>
                             https://eltalondeaquiles.pucp.edu.pe/wp-content/uploads/2015/09/Aristoteles-Acerca-del-alma.-Gredos.-Trad-Tomas-Calvo.pdf
-                        </a>
+                        </a> */}
                     </li>
                     <li>
-                        Fernández Mateo, J. (2021). La técnica es el nuevo sujeto de la historia: posthumanismo tecnológico y el crepúsculo de lo humano. <em>Revista Iberoamericana de Bioética.</em>
-                        <br />
-                        <a className="link" href="https://doi.org/10.14422/rib.i16.y2021.004" target="_blank" rel="noopener noreferrer">
+                        Fernández Mateo, J. (2021). La técnica es el nuevo sujeto de la historia: posthumanismo tecnológico y el crepúsculo de lo humano. Revista Iberoamericana de Bioética.
+                        {/* <a className="link" href="https://doi.org/10.14422/rib.i16.y2021.004" target="_blank" rel="noopener noreferrer">
                             <svg className="linkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
                                 <path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z" />
                             </svg>
                             https://doi.org/10.14422/rib.i16.y2021.004
-                        </a>
+                        </a> */}
                     </li>
                     <li>
-                        González R. Arnaiz, G. (2021). <em>Ética y responsabilidad: La condición responsiva del ser humano</em> (1.ª ed.). Madrid, Difusora Larousse  - Editorial Tecnos.
+                        González R. Arnaiz, G. (2021).Ética y responsabilidad: La condición responsiva del ser humano (1.ª ed.). Madrid, Difusora Larousse  - Editorial Tecnos.
                     </li>
                     <li>
-                        Eduardo M. Ortega Martín, (2022). La <em>lectio Divina </em> en el occidente medieval (ss. X-XIII): Análisis comparativo con otras religiones de oriente.
+                        Eduardo M. Ortega Martín, (2022). La lectio Divina en el occidente medieval (ss. X-XIII): Análisis comparativo con otras religiones de oriente. - Artículo,  Universidad Loyola.
+                    </li>
+                    <li>
+                        <li>
+                            Recursos de imágenes SVG:svgsilh -    https://svgsilh.com/es/
+                        </li>
                     </li>
 
                 </ol>
