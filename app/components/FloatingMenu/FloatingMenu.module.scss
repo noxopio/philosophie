@@ -72,8 +72,9 @@
     height: auto;
     background: var(--menu-bg);
     border: 3px solid var(--menu-border);
+    padding: 10px;
 
-    border-radius: 2% 2% 0 0;
+    border-radius: 50%;
 
     img {
         display: block;
