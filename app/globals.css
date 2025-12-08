@@ -21,6 +21,73 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Global link style for bibliography links */
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.24s ease;
+  font-family: 'Georgia', serif;
+}
+
+.link:hover {
+  background: var(--link-hover-bg);
+  color: var(--link-hover-color);
+  transform: translateX(4px);
+}
+
+.linkIcon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Bibliography list styling for consistent design */
+.bibliographyList {
+  list-style: decimal; /* numeric markers */
+  margin: 1rem 0 1.5rem 0;
+  padding-left: 1.25rem;
+  counter-reset: bib-item;
+}
+
+.bibliographyList li {
+  margin: 0.6rem 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--card-bg, rgba(0,0,0,0.03));
+  color: var(--text-color);
+  font-family: 'Georgia', serif;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bibliographyList li::marker {
+  color: var(--muted-text, #666);
+  font-weight: 600;
+}
+
+.bibliographyList li a.link {
+  margin-top: 0.25rem;
+  padding: 6px 10px;
+}
+
+.bibliographyList li em {
+  font-style: italic;
 }

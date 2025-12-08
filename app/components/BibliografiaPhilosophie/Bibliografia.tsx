@@ -2,9 +2,9 @@
 'use client';
 
 import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import styles from '../shared/PageLayout.module.scss';
 import { getImageFilter } from '../utiils';
-import { useRef } from 'react';
 
 interface Article {
     id: number;
@@ -16,26 +16,7 @@ interface Article {
 }
 
 const Bibliografia = () => {
-    const articles: Article[] = [
-        {
-            id: 1,
-            title: 'Filosofía Medieval',
-            subtitle: 'La filosofía durante la Edad Media',
-            content:
-                'La filosofía medieval se extiende, a grandes rasgos, desde la cristianización del Imperio romano hasta el Renacimiento.[37]​ Se define, en parte, por el redescubrimiento y posterior desarrollo de la griega clásica y de la filosofía helenística, y, en parte, por la necesidad de abordar los problemas teológicos y de integrar las doctrinas sagradas, entonces muy extendidas, de la religión abrahámica. (Judaísmo, Cristianismo y Islam) con el aprendizaje del secular. Algunos problemas discutidos a lo largo de este periodo son la relación de la fe con la razón, la existencia y unidad de Dios, el objeto de la teología y la metafísica, los problemas del conocimiento, de los universales y de la individuación.',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/250px-Saint_Augustine_by_Philippe_de_Champaigne.jpg',
-            category: 'Filosofía Bibliografia',
-        },
-        {
-            id: 2,
-            title: 'Renacimiento y Humanismo',
-            subtitle: 'El resurgimiento del pensamiento clásico',
-            content:
-                'El Renacimiento fue un periodo de renovación cultural e intelectual en Europa que abarcó aproximadamente desde el siglo XIV hasta el siglo XVII. Durante este tiempo, hubo un resurgimiento del interés por la filosofía, el arte y la ciencia de la antigüedad clásica. El Humanismo, una corriente filosófica central del Renacimiento, enfatizaba el valor y la dignidad del individuo, así como la importancia de la educación y el estudio de las humanidades (literatura, historia, filosofía). Filósofos como Pico della Mirandola y Erasmus promovieron ideas que desafiaban las doctrinas medievales y sentaron las bases para el pensamiento moderno.',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Giordano_Bruno_Campo_dei_Fiori.jpg/250px-Giordano_Bruno_Campo_dei_Fiori.jpg',
-            category: 'Filosofía Bibliografia',
-        },
-    ];
+    const articles: Article[] = [];
 
     return (
         <main className={styles.mainContent}>
@@ -46,7 +27,6 @@ const Bibliografia = () => {
                 transition={{ duration: 0.8 }}
             >
                 <div className={styles.heroContent}>
-
                     <img
                         src="/book.svg"
                         alt="Book Icon"
@@ -57,9 +37,9 @@ const Bibliografia = () => {
                     />
 
                     <div className={styles.heroText}>
-                        <h1 className={styles.mainTitle}> Bibliografia</h1>
+                        <h1 className={styles.mainTitle}>Bibliografia</h1>
                         <p className={styles.mainSubtitle}>
-                            Bibliografia de las principales obras y autores que han influido en la filosofía a lo largo de la historia.
+                            Recursos y referencias.
                         </p>
                     </div>
                 </div>
@@ -71,49 +51,63 @@ const Bibliografia = () => {
                 ))}
             </div>
 
-            {/* <motion.section
+            <motion.section
                 className={styles.conclusionSection}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.8 }}
             >
-                <h2>Normas APA </h2>
+                <h2>Bibliografía</h2>
 
-                <p>
-                    pautas básicas para referencias y citas según la <strong>APA</strong>
-                </p>
+                <ol className="bibliographyList">
+                    <li>
+                        Panikkar, R. (2015). <em>Obras completas. Tomo I: Mística y espiritualidad. Vol. 1: Mística, plenitud de vida</em>. Herder.
+                        <br />
+                        <a className="link" href="https://doi-org.bibliotecavirtual.unad.edu.co/10.2307/j.ctvt9jzpr" target="_blank" rel="noopener noreferrer">
+                            <svg className="linkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                <path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z" />
+                            </svg>
+                            https://doi-org.bibliotecavirtual.unad.edu.co/10.2307/j.ctvt9jzpr
+                        </a>
+                    </li>
+                    <li>
+                        Aristóteles. (1978). <em>Acerca del alma</em> Editorial Gredos.
+                        <br />
+                        <a className="link" href="https://eltalondeaquiles.pucp.edu.pe/wp-content/uploads/2015/09/Aristoteles-Acerca-del-alma.-Gredos.-Trad-Tomas-Calvo.pdf" target="_blank" rel="noopener noreferrer">
+                            <svg className="linkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                <path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z" />
+                            </svg>
+                            https://eltalondeaquiles.pucp.edu.pe/wp-content/uploads/2015/09/Aristoteles-Acerca-del-alma.-Gredos.-Trad-Tomas-Calvo.pdf
+                        </a>
+                    </li>
+                    <li>
+                        Fernández Mateo, J. (2021). La técnica es el nuevo sujeto de la historia: posthumanismo tecnológico y el crepúsculo de lo humano. <em>Revista Iberoamericana de Bioética.</em>
+                        <br />
+                        <a className="link" href="https://doi.org/10.14422/rib.i16.y2021.004" target="_blank" rel="noopener noreferrer">
+                            <svg className="linkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+                                <path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z" />
+                            </svg>
+                            https://doi.org/10.14422/rib.i16.y2021.004
+                        </a>
+                    </li>
+                    <li>
+                        González R. Arnaiz, G. (2021). <em>Ética y responsabilidad: La condición responsiva del ser humano</em> (1.ª ed.). Madrid, Difusora Larousse  - Editorial Tecnos.
+                    </li>
+                    <li>
+                        Eduardo M. Ortega Martín, (2022). La <em>lectio Divina </em> en el occidente medieval (ss. X-XIII): Análisis comparativo con otras religiones de oriente.
+                    </li>
 
-                <h3>Formato general — Lista de referencias</h3>
-                <ul>
-                    <li><strong>Libro:</strong> Apellido, A. A. (Año). <em>Título del libro</em>. Editorial.</li>
-                    <li><strong>Artículo de revista:</strong> Apellido, A. A., & Apellido, B. B. (Año). Título del artículo. <em>Título de la revista</em>, volumen(número), pp–pp. https://doi.org/xx.xxx/yyyy</li>
-                    <li><strong>Página web:</strong> Apellido, A. A. (Año, día mes). Título de la página. Nombre del sitio. URL</li>
-                </ul>
+                </ol>
 
-                <h3>Citas en el texto</h3>
-                <ul>
-                    <li><strong>Paráfrasis:</strong> (Apellido, año) — ejemplo: (González, 2019).</li>
-                    <li><strong>Cita textual corta:</strong> (Apellido, año, p. xx) — ejemplo: (González, 2019, p. 23).</li>
-                    <li><strong>Autor en el texto:</strong> Apellido (año) presenta... — ejemplo: González (2019) afirma que...</li>
-                </ul>
 
-                <h3>Ejemplos prácticos</h3>
-                <ul>
-                    <li><strong>Libro:</strong> Smith, J. A. (2020). <em>Introducción a la filosofía</em>. Editorial Ejemplo.</li>
-                    <li><strong>Artículo:</strong> Pérez, L., & Ruiz, M. (2018). La ética en la modernidad. <em>Revista de Filosofía</em>, 45(2), 123-145. https://doi.org/10.1234/rf.v45i2.678</li>
-                    <li><strong>Sitio web:</strong> López, R. (2021, 10 de marzo). Historia del pensamiento oriental. FilosofíaHoy. https://filosofiahoy.org/historia-oriental</li>
-                </ul>
-
-                <p>
-                    Para referencias con múltiples autores, DOI, ediciones, capítulos de libros o recursos especializados, consulte la guía oficial de la APA 7ª edición. Esta sección pretende ser una ayuda rápida para redactar la sección de bibliografía siguiendo las normas básicas.
-                </p>
-            </motion.section> */}
+            </motion.section>
         </main>
     );
-};
-
-interface ArticleCardProps {
+}; interface ArticleCardProps {
     article: Article;
     index: number;
 }
@@ -121,10 +115,10 @@ interface ArticleCardProps {
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: '-100px' });
-    // const imageFilter = getImageFilter();
 
     const renderImage = (src: string | undefined) => {
         if (!src) return null;
+
         if (src.startsWith('http') || src.startsWith('/')) {
             return (
                 <img
@@ -132,10 +126,10 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
                     alt={article.title}
                     width={120}
                     height={120}
-                // style={{ filter: imageFilter }}
                 />
             );
         }
+
         return <span>{src}</span>;
     };
 
@@ -151,6 +145,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
                 <div className={styles.articleImage}>
                     {renderImage(article.image)}
                 </div>
+
                 <div className={styles.articleMeta}>
                     <span className={styles.category}>{article.category}</span>
                     <h2 className={styles.articleTitle}>{article.title}</h2>

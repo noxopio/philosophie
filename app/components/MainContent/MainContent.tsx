@@ -10,7 +10,7 @@ interface Article {
     id: number;
     title: string;
     subtitle: string;
-    content: string;
+    content: React.ReactNode;
     image: string;
     category: string;
 }
@@ -20,58 +20,89 @@ const MainContent = () => {
     const articles: Article[] = [
         {
             id: 1,
-            title: 'Pa kua',
-            subtitle: 'El símbolo de los ocho trigramas en la filosofía china',
-            content:
-                'El Pa kua o Bagua (‘ocho estados de cambio’) es el nombre que recibe un símbolo de origen chino compuesto por ocho trigramas (agrupaciones de tres líneas, unas sobre otras, algunas enteras y otras cortadas) ordenados de una manera determinada alrededor de un centro, el yin-yang. Cada trigrama representa un concepto fundamental de la filosofía china, como el cielo, la tierra, el trueno, el viento, el agua, el fuego, la montaña y el lago. El Pa kua es un símbolo central en el taoísmo y se utiliza en diversas prácticas filosóficas y espirituales chinas, incluyendo el feng shui y las artes marciales.',
+            title: 'Cosmovisión Oriental',
+            subtitle: 'La unidad del ser y la dualidad',
+            content: (<>
+                <p>
+                    La palabra Oriente, que designa al Este, en relación con Europa, procede de la
+                    palabra latina orior, que significa: nacer o levantarse. Se refiere pues a que es
+                    el horizonte por donde el sol se ve levantarse por la mañana.
+                    En esta cosmovisión encontramos a la filosofía japonesa que se origina a partir
+                    del desarrollo cultural de Japón, a través del proceso religioso e histórico que
+                    surgió del pensamiento chino, por otra parte se encuentra la filosofía india
+                    como tradición milenaria que busca la liberación del sufrimiento y la
+                    comprensión de la realidad.
+                    La filosofía japonesa (taoísmo) se ha mantenido hasta la época de Heian,
+                    enfocándose en la sabiduría practica y la experiencia vivida. Conceptos como
+                    ikigai representan la razón de ser y la motivación en la vida.
+                    La filosofía india (budismo) se divide en dos categorías: Las escuelas
+                    ortodoxas (astika). que aceptan los vedas como autoridad, y las escuelas
+                    heterodoxas (nastika), que no los aceptan, Las principales escuelas ortodoxas
+                    incluyen Vedanta, Yoga, Samkhya, Nyaya, Vaisheshika y Mimamsa.
+                </p>
+                <p><b>Dimensiones:</b></p>
+                <p><b>•Corporal:</b> Dominio de la mente y el cuerpo (atención plena)</p>
+                <p><b>•Simbólica:</b> Mantras, mitos, leyendas y simplicidad.</p>
+                <p><b>•Racional:</b>  Aportes científicos a través de la corriente Rangaku, por ejemplo.
+                    También el pensamiento lógico y el razonamiento como vías para alcanzar el
+                    conocimiento superior, además de la realidad percibida a través de los
+                    sentidos.</p>
+                <p><b>•Ética: </b>  Proceso en el devenir de los seres humanos a lo largo de las reencarnaciones, las relaciones con los dioses, o el placer, entre otros. Justicia, virtud, humildad, aceptación y adaptabilidad.</p>
+                <p><b>•Espiritual: </b>  La espiritualidad hindú se manifiesta a través de la práctica de yoga, la meditacion y rituales que buscan la liberación del ciclo de reencarnaciones y la unión con lo sagrado. </p>
+                <p><b>•Descripción: </b>  Se desarrollo en regiones como India, China y Japón. A diferencia de la filosofía occidental, que se basa en el razonamiento lógico, la filosofía oriental se enfoca en la experiencia directa y el desarrollo personal. </p>
+            </>),
             image: ying,
             category: 'Filosofía Oriental',
         },
         {
             id: 2,
-            title: 'El Idealismo Platónico',
+            title: 'Cosmovisión Occidental',
             subtitle: 'La teoría de las Ideas y el mundo sensible',
-            content:
-                'Platón propuso que existe un mundo de Ideas o Formas perfectas e inmutables, del cual el mundo sensible es solo una copia imperfecta. Esta teoría ha influenciado profundamente el pensamiento occidental, desde la metafísica hasta la epistemología, planteando preguntas fundamentales sobre la naturaleza de la realidad.',
+            content: (<>
+                <p>
+                    El Occidente, es el horizonte donde el sol se pone o muere. Tradicionalmente
+                    se considera que la cultura occidental nace en la Antigua Grecia. Sus mayores
+                    contribuciones en los ámbitos de la filosofía fueron, las matemáticas y la
+                    ciencia.
+                    La filosofía occidental comienza en el siglo VI a.C. con los filósofos
+                    presocráticos, quienes buscaban explicaciones racionales sobre el mundo,
+                    alejándose de las narrativas míticas.
+                    Ha influido en áreas como la ciencia, la política y la ética. Su desarrollo ha
+                    sido un proceso continuo de cuestionamiento y reflexión moldeando la cultura
+                    occidental. La filosofía no solo busca entender el mundo, sino también
+
+                    transformar la sociedad a través del pensamiento crítico y la búsqueda de la
+                    verdad.
+                    Un representante de la filosofía occidental fue Tomás de Aquino, quien se vio
+                    influenciado por Aristóteles, y de esta forma pretendió  conciliar su filosofía
+                    con la teología cristiana. Con el objetivo de desarrollar una comprensión
+                    del alma, se vio abocado a considerar las cuestiones metafísicas de la Teoría
+                    de la sustancia, la materia, la forma y el cambio. Definió una sustancia
+                    material como la combinación de una esencia y rasgos accidentales, siendo la
+                    esencia una combinación de materia y forma, similar a la visión aristotélica.
+                    Para los humanos, el alma es la esencia. También influenciado por Platón,
+                    veía el alma como algo inmutable e independiente del cuerpo.
+                </p>
+                <p><b>Dimensiones:</b></p>
+                <p><b>•Corporal:</b> Razón y fe.</p>
+                <p><b>•Simbólica:</b> Oraciones, escrituras, imágenes y cantos.</p>
+                <p><b>•Racional:</b> Se interesaron en analizar los problemas acerca de la naturaleza y la
+                    moralidad del poder político, la unidad nacional, la seguridad interna, el poder
+                    del Estado y la justicia internacional.</p>
+                <p><b>•Ética:</b>  Examina la naturaleza de los juicios morales, y la ética normativa, que
+                    establece principios sobre cómo debemos actuar. La compasión y la conexión
+                    con todo lo que existe.</p>
+                <p><b>•Espiritual:</b> Espiritual: en occidente surgen doctrinas y prácticas religiosas, especialmente
+                    en la perspectiva de la relación entre el ser humano y un ser superior, Dios.</p>
+                <p><b>•Descripción:</b>  Aportes científicos a través de la corriente Rangaku, por ejemplo.
+                    También el pensamiento lógico y el razonamiento como vías para alcanzar el
+                    conocimiento superior, además de la realidad percibida a través de los
+                    sentidos.</p>
+            </>),
             image: '📐',
-            category: 'Filosofía Antigua',
+            category: 'Filosofía Occidental',
         },
-        {
-            id: 3,
-            title: 'La Lógica Aristotélica',
-            subtitle: 'El fundamento del razonamiento científico',
-            content:
-                'Aristóteles desarrolló el primer sistema formal de lógica, estableciendo las bases del razonamiento deductivo. Su silogismo y las categorías del ser siguen siendo herramientas fundamentales en el análisis filosófico y científico. Su influencia se extiende desde la Edad Media hasta la filosofía contemporánea.',
-            image: '📚',
-            category: 'Filosofía Antigua',
-        },
-        {
-            id: 4,
-            title: 'El Cogito Cartesiano',
-            subtitle: 'La duda metódica y la certeza del pensamiento',
-            content:
-                'René Descartes inauguró la filosofía moderna con su método de la duda radical. Al dudar de todo lo que pudiera ser puesto en cuestión, llegó a la única certeza indudable: "Pienso, luego existo". Este fundamento racionalista marcó un nuevo comienzo para la filosofía y el conocimiento científico.',
-            image: '🤔',
-            category: 'Filosofía Moderna',
-        },
-        {
-            id: 5,
-            title: 'El Imperativo Categórico',
-            subtitle: 'La ética kantiana y el deber moral',
-            content:
-                'Immanuel Kant propuso que la moralidad se basa en el imperativo categórico: actuar solo según aquella máxima que puedas querer que se convierta en ley universal. Esta ética del deber trasciende las consecuencias y se centra en la intención y la universalidad de nuestras acciones.',
-            image: '⚖️',
-            category: 'Filosofía Moderna',
-        },
-        {
-            id: 6,
-            title: 'El Superhombre Nietzscheano',
-            subtitle: 'La transvaloración de todos los valores',
-            content:
-                'Friedrich Nietzsche proclamó la muerte de Dios y propuso la figura del Übermensch o superhombre como ideal. Este ser trasciende la moral tradicional y crea sus propios valores. Su filosofía del nihilismo y la voluntad de poder han tenido un impacto profundo en el pensamiento contemporáneo.',
-            image: '⚡',
-            category: 'Filosofía Contemporánea',
-        },
+
     ];
 
     return (
@@ -92,9 +123,19 @@ const MainContent = () => {
                         className={styles.heroImage}
                     />
                     <div className={styles.heroText}>
-                        <h1 className={styles.mainTitle}>Cosmovision</h1>
+                        <h1 className={styles.mainTitle}>Introducción</h1>
                         <p className={styles.mainSubtitle}>
-                            Un viaje a través de las ideas que han moldeado nuestro entendimiento del mundo
+                            La disociación que evidenciamos sobre el Ser desde el principio no es más que
+                            la divina creación de sí mismo por sí mismo y para sí, en la representación de
+                            la imagen en conjunto, elaborada por las partes del alma y las partes del
+                            cuerpo, esta imagen es la acción de su creación, de su mundo. Así pues, el ser
+                            humano en su búsqueda incansable por el conocimiento y la plenitud, se ha
+                            cuestionado sobre temas como la existencia y el propósito del hombre,
+                            creando formas filosóficas y religiones que han proporcionado identidad
+                            cultural a los pueblos, sentido y significado. “El hombre es antes un espíritu
+                            encarnado que un viviente racional, un animal espiritual, se podría decir, si
+                            anima se interpreta según su etimología indoeuropea (aniti, él respira; anilah,
+                            soplo). Anima incluiría entonces también el espíritu.” (Panikkar, 2015, P. 21)
                         </p>
                     </div>
                 </div>
@@ -106,20 +147,20 @@ const MainContent = () => {
                 ))}
             </div>
 
-            <motion.section
+            {/* <motion.section
                 className={styles.conclusionSection}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.8 }}
             >
-                <h2>El Legado Filosófico</h2>
+                <h2>Comparación crítica </h2>
                 <p>
                     La filosofía nos invita a cuestionar, reflexionar y buscar la verdad. Desde los antiguos
                     griegos hasta los pensadores contemporáneos, cada época ha aportado nuevas perspectivas
                     que enriquecen nuestra comprensión de la existencia, el conocimiento y la moralidad.
                 </p>
-            </motion.section>
+            </motion.section> */}
         </main>
     );
 };
@@ -170,7 +211,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, index }) => {
             </div>
 
             <div className={styles.articleContent}>
-                <p>{article.content}</p>
+                {typeof article.content === 'string' ? <p>{article.content}</p> : article.content}
             </div>
 
             {/* <motion.button

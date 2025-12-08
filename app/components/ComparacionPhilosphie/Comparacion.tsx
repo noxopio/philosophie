@@ -19,22 +19,18 @@ const Comparacion = () => {
     const articles: Article[] = [
         {
             id: 1,
-            title: 'Filosofía Medieval',
-            subtitle: 'La filosofía durante la Edad Media',
+            title: 'Comparación crítica',
+            subtitle: ' El hombre sabio; encuentra placer en su pasión, la pasión del sabio es el conocimiento',
             content:
-                'La filosofía medieval se extiende, a grandes rasgos, desde la cristianización del Imperio romano hasta el Renacimiento.[37]​ Se define, en parte, por el redescubrimiento y posterior desarrollo de la griega clásica y de la filosofía helenística, y, en parte, por la necesidad de abordar los problemas teológicos y de integrar las doctrinas sagradas, entonces muy extendidas, de la religión abrahámica. (Judaísmo, Cristianismo y Islam) con el aprendizaje del secular. Algunos problemas discutidos a lo largo de este periodo son la relación de la fe con la razón, la existencia y unidad de Dios, el objeto de la teología y la metafísica, los problemas del conocimiento, de los universales y de la individuación.',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Saint_Augustine_by_Philippe_de_Champaigne.jpg/250px-Saint_Augustine_by_Philippe_de_Champaigne.jpg',
-            category: 'Filosofía Comparacion',
-        },
-        {
-            id: 2,
-            title: 'Pa kua',
-            subtitle: 'El símbolo de los ocho trigramas en la filosofía china',
-            content:
-                'El Pa kua o Bagua (‘ocho estados de cambio’) es el nombre que recibe un símbolo de origen chino compuesto por ocho trigramas (agrupaciones de tres líneas, unas sobre otras, algunas enteras y otras cortadas) ordenados de una manera determinada alrededor de un centro, el yin-yang. Cada trigrama representa un concepto fundamental de la filosofía china, como el cielo, la tierra, el trueno, el viento, el agua, el fuego, la montaña y el lago. El Pa kua es un símbolo central en el taoísmo y se utiliza en diversas prácticas filosóficas y espirituales chinas, incluyendo el feng shui y las artes marciales.',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bagua-name-later.svg/250px-Bagua-name-later.svg.png',
-            category: 'Filosofía Oriental',
-        },
+                `Sin duda la filosofía occidental y la filosofía oriental convergen en la búsqueda de la plenitud del espíritu, por ejemplo, en los monasterios medievales de occidente y en oriente, los monjes y sacerdotes se entregaron a la meditación buscando la realización del espíritu. Sin embargo, en occidente el sistema relaciona a Dios con las creaturas, donde Dios es rey celestial, en un gobierno definido por la sagrada escritura, así pues, también lo es también el estado, regido por la sociedad política y civil en orden al cumplimiento de la legalidad y legitimidad impuesta por el gobernante y los representantes políticos. De alguna manera podríamos percibir al ser más libre en el pensamiento oriental, pues en esta cosmovisión el hombre busca una transformación interna del ser, no tiene pretensiones de eternidad, oriente se encuentra en el aquí y el ahora, en el encuentro de la felicidad y la plenitud.
+Por otra parte, Aristóteles hizo una distinción sobre la felicidad en el hombre, el humano y el sabio; El hombre, así como un esclavo, no goza de felicidad verdadera, porque no se le deja actuar con virtud, no posee vida humana, es decir, no es libre. Encuentra una aparente y falsa felicidad en pasatiempos que le otorgan diversión y placer banal e intrascendente. El hombre humano, está entre el trascender y la necesidad, es el hombre que mediante su actividad encuentra placer en el intelecto, es semejante al hombre sabio porque saborea la actividad divina, de suerte este hombre contempla y es feliz; elije ser feliz de acuerdo con la actividad contemplativa. El hombre sabio; encuentra placer en su pasión, la pasión del sabio es el conocimiento, la trascendencia que causa placer y apasiona, en analogía, el intelecto puro es el motor inmóvil, simple e infatigable. Podemos observar una similitud en el encuentro de la felicidad entre las dos cosmovisiones porque el sabio se encuentra alineado con el orden natural, en la contemplación. 
+El ser humano como creador a partir de la búsqueda incansable del conocimiento y su afán de progreso ha encontrado respuestas y avances para el beneficio y la plenitud de la humanidad, sin embargo, ¿hasta que punto es realmente beneficioso vivir bajo un nuevo orden universal dentro de este sistema tecnológico? Se vislumbra a un ser humano desdibujado y muy alejado de la naturaleza y lo esencial. La tecnología es pues el nuevo dogma de la civilización, en la practicidad productiva constante, y una carrera de consumo donde el ser encuentra su realización y felicidad cuando llega a la meta, en la adquisición de la materia misma.  
+Una mirada positiva que nos dejan los avances tecnológicos y las herramientas en su buen uso, es la universalidad, que ha permitido el encuentro y la cercanía con otras cosmovisiones logrando interculturalidad. Se cierra un poco la brecha de desigualdad y discriminación, donde vemos una humanidad más consciente que descubre en su entendimiento otras posibilidades y encuentros para vivir en plenitud y armonía.
+`,
+            image: '/brain.svg',
+            category: 'Convergencias y divergencias',
+        }
+
     ];
 
     return (
@@ -53,13 +49,15 @@ const Comparacion = () => {
                         width={250}
                         height={250}
                         style={{ filter: getImageFilter() }}
+
                         className={styles.heroImage}
                     />
 
                     <div className={styles.heroText}>
-                        <h1 className={styles.mainTitle}> Comparacion</h1>
+                        <h1 className={styles.mainTitle}>Comparación crítica </h1>
                         <p className={styles.mainSubtitle}>
-                            Las corrientes filosóficas a lo largo de la historia han surgido en respuesta a las condiciones sociales, culturales y políticas de sus respectivas épocas. Cada una de estas corrientes refleja las preocupaciones y valores predominantes de su tiempo, ofreciendo perspectivas únicas sobre la naturaleza de la realidad, el conocimiento y la ética.Aportando desde este marco una vision de sus gentes.
+                            La tecnología es pues el nuevo dogma de la civilización, en la practicidad productiva constante, y una carrera de consumo donde el ser encuentra su realización y felicidad cuando llega a la meta, en la adquisición de la materia misma.
+
                         </p>
                     </div>
                 </div>
@@ -71,7 +69,7 @@ const Comparacion = () => {
                 ))}
             </div>
 
-            <motion.section
+            {/* <motion.section
                 className={styles.conclusionSection}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -82,7 +80,7 @@ const Comparacion = () => {
                 <p>
                     Bibliografia.
                 </p>
-            </motion.section>
+            </motion.section> */}
         </main>
     );
 };

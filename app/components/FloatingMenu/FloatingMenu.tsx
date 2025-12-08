@@ -41,8 +41,8 @@ const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
 
     const menuItems = [
         { label: 'Inicio', onClick: () => router.push('/') },
-        { label: 'Oriental', onClick: () => router.push('/oriental') },
-        { label: 'Occidental', onClick: () => router.push('/occidental') },
+        // { label: 'Oriental', onClick: () => router.push('/oriental') },
+        // { label: 'Occidental', onClick: () => router.push('/occidental') },
         { label: 'Comparacion', onClick: () => router.push('/comparacion') },
         { label: 'Conclusiones', onClick: () => router.push('/conclusiones') },
         { label: 'Bibliografía', onClick: () => router.push('/bibliografia') },

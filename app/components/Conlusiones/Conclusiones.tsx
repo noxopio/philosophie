@@ -17,24 +17,7 @@ interface Article {
 
 const Conclusiones = () => {
     const articles: Article[] = [
-        {
-            id: 1,
-            title: 'Pa kua',
-            subtitle: 'El símbolo de los ocho trigramas en la filosofía china',
-            content:
-                'El Pa kua o Bagua (‘ocho estados de cambio’) es el nombre que recibe un símbolo de origen chino compuesto por ocho trigramas (agrupaciones de tres líneas, unas sobre otras, algunas enteras y otras cortadas) ordenados de una manera determinada alrededor de un centro, el yin-yang. Cada trigrama representa un concepto fundamental de la filosofía china, como el cielo, la tierra, el trueno, el viento, el agua, el fuego, la montaña y el lago. El Pa kua es un símbolo central en el taoísmo y se utiliza en diversas prácticas filosóficas y espirituales chinas, incluyendo el feng shui y las artes marciales.',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bagua-name-later.svg/250px-Bagua-name-later.svg.png',
-            category: 'Filosofía Conclusiones',
-        },
-        {
-            id: 2,
-            title: 'Pa kua',
-            subtitle: 'El símbolo de los ocho trigramas en la filosofía china',
-            content:
-                'El Pa kua o Bagua (‘ocho estados de cambio’) es el nombre que recibe un símbolo de origen chino compuesto por ocho trigramas (agrupaciones de tres líneas, unas sobre otras, algunas enteras y otras cortadas) ordenados de una manera determinada alrededor de un centro, el yin-yang. Cada trigrama representa un concepto fundamental de la filosofía china, como el cielo, la tierra, el trueno, el viento, el agua, el fuego, la montaña y el lago. El Pa kua es un símbolo central en el taoísmo y se utiliza en diversas prácticas filosóficas y espirituales chinas, incluyendo el feng shui y las artes marciales.',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bagua-name-later.svg/250px-Bagua-name-later.svg.png',
-            category: 'Filosofía Conclusiones',
-        },
+
     ];
 
     return (
@@ -49,9 +32,9 @@ const Conclusiones = () => {
 
 
                     <div className={styles.heroText}>
-                        <h1 className={styles.mainTitle}>Conclusiones</h1>
+                        <h1 className={styles.mainTitle}>Conclusión personal </h1>
                         <p className={styles.mainSubtitle}>
-                            Cada una de las corrientes filosoficas son un reflejo de la sociedad y cultura de su tiempo, y juntas ofrecen una visión rica y diversa de la búsqueda humana por comprender el mundo y nuestro lugar en él.
+                            La filosofía y las doctrinas cobran un papel esencial en nuestra sociedad, necesitamos seres más reflexivos ante el devenir, generadores y creadores de cambios e ideas que dignifiquen al ser humano, logrando una humanidad más virtuosa, libre y consciente con mejores condiciones que corten con la brecha de la desigualdad.
                         </p>
                     </div>
                     <img
@@ -71,7 +54,7 @@ const Conclusiones = () => {
                 ))}
             </div>
 
-            <motion.section
+            {/* <motion.section
                 className={styles.conclusionSection}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -83,7 +66,7 @@ const Conclusiones = () => {
                     Cada una de las corrientes filosoficas son un reflejo de la sociedad y cultura de su tiempo, y juntas
                     ofrecen una visión rica y diversa de la búsqueda humana por comprender el mundo y nuestro lugar en él.
                 </p>
-            </motion.section>
+            </motion.section> */}
         </main>
     );
 };
