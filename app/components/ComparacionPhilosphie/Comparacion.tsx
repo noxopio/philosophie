@@ -63,7 +63,7 @@ Una mirada positiva que nos dejan los avances tecnológicos y las herramientas e
 
 
                     </div>
-                    <div style={{ display: 'flex', gap: '20px', flexDirection: 'row' }}>
+                    <div className={styles.heroImages}>
                         <img
                             src="/buda.svg"
                             alt="buda"
