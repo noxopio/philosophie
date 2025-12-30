@@ -21,7 +21,9 @@
     position: relative;
     z-index: 1010;
     width: 60px;
+    object-fit: fill;
     height: 60px;
+
     border-radius: 50%;
     background: var(--menu-bg);
     border: 3px solid var(--menu-border);
@@ -51,6 +53,55 @@
 
 .bookSpine {
     font-weight: bold;
+}
+
+.iconWrapper {
+    position: relative;
+    width: 48px;
+    height: 21px;
+    display: inline-block;
+    perspective: 900px;
+    /* needed for 3D effect */
+}
+
+.flipper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 5s cubic-bezier(.2, .8, .2, 1);
+}
+
+.iconWrapper:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.menuIcon {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.backIcon {
+    font-size: 22px;
+    color: var(--menu-text);
 }
 
 .menuContainer {

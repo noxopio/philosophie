@@ -75,16 +75,23 @@ const FloatingMenu: React.FC<FloatingMenuProps> = (props) => {
                     {isOpen ? (
                         '✕'
                     ) : (
-
-                        // <img
-                        //     src="/philo.svg"
-                        //     alt="Menú"
-                        //     width={48}
-                        //     height={48}
-                        //     style={{ filter: getImageFilter(theme) }}
-                        //     className={styles.menuIcon}
-                        // />
-                        '☰'
+                        <div className={styles.iconWrapper}>
+                            <div className={styles.flipper}>
+                                <div className={`${styles.face} ${styles.front}`}>
+                                    <img
+                                        src="/philo.svg"
+                                        alt="Menú"
+                                        width={48}
+                                        height={48}
+                                        style={{ filter: getImageFilter(theme) }}
+                                        className={styles.menuIcon}
+                                    />
+                                </div>
+                                <div className={`${styles.face} ${styles.back}`} aria-hidden>
+                                    <span className={styles.backIcon}>☰</span>
+                                </div>
+                            </div>
+                        </div>
                     )}
                 </span>
 
